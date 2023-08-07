@@ -13,6 +13,7 @@
 		8D38C28E2A8109440074FEA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D38C28C2A8109440074FEA0 /* Main.storyboard */; };
 		8D38C2902A8109460074FEA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D38C28F2A8109460074FEA0 /* Assets.xcassets */; };
 		8D38C2932A8109460074FEA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D38C2912A8109460074FEA0 /* LaunchScreen.storyboard */; };
+		8D38C2A02A810D510074FEA0 /* CustomAlert in Frameworks */ = {isa = PBXBuildFile; productRef = 8D38C29F2A810D510074FEA0 /* CustomAlert */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +25,7 @@
 		8D38C28F2A8109460074FEA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D38C2922A8109460074FEA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D38C2942A8109460074FEA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8D38C29C2A8109A70074FEA0 /* CustomAlertView */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CustomAlertView; sourceTree = "<group>"; };
+		8D51AA3F2A8110A6006D4F32 /* CustomAlertView */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CustomAlertView; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D38C2A02A810D510074FEA0 /* CustomAlert in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +46,7 @@
 				8D38C29A2A8109890074FEA0 /* Packages */,
 				8D38C2852A8109440074FEA0 /* CustomAlertExample */,
 				8D38C2842A8109440074FEA0 /* Products */,
+				8D38C29E2A810D510074FEA0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,9 +75,16 @@
 		8D38C29A2A8109890074FEA0 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				8D38C29C2A8109A70074FEA0 /* CustomAlertView */,
+				8D51AA3F2A8110A6006D4F32 /* CustomAlertView */,
 			);
 			name = Packages;
+			sourceTree = "<group>";
+		};
+		8D38C29E2A810D510074FEA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,6 +103,9 @@
 			dependencies = (
 			);
 			name = CustomAlertExample;
+			packageProductDependencies = (
+				8D38C29F2A810D510074FEA0 /* CustomAlert */,
+			);
 			productName = CustomAlertExample;
 			productReference = 8D38C2832A8109440074FEA0 /* CustomAlertExample.app */;
 			productType = "com.apple.product-type.application";
@@ -368,6 +381,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8D38C29F2A810D510074FEA0 /* CustomAlert */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CustomAlert;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8D38C27B2A8109440074FEA0 /* Project object */;
 }
