@@ -28,16 +28,13 @@ With CustomAlertView you can create a simple Alert instead of using the default 
 
 ## Features
 
-- [x] Personalise Title, Message and both Buttons
-- [x] Change Accent Color
-- [x] Change Background Color
+- Personalise Title, Message and both Buttons
+- Change Accent Color
+- Change Background Color
 
 ## Example
 
-<p align="center">
-![lightmodealert](https://github.com/jadebowl/CustomAlertView/assets/57940508/0c2327f2-70e7-431c-b144-6e09d295a14a)
-![darkmodealert](https://github.com/jadebowl/CustomAlertView/assets/57940508/0ac2c3f6-73a0-482c-9645-f98c7e4d0e88)
-</p>
+![lightmodealert](https://github.com/jadebowl/CustomAlertView/assets/57940508/63501581-8b1b-4f3f-9f21-d671d4983fea)
 
 ## Installation
 
@@ -87,14 +84,14 @@ let alert = AlertView()
 
 Customise the UI, add Fade transition and Constraints:
 ```ogdl
-        alert.setupContents(accentColor: .purple, backgroundColor: .systemBackground, title: "I am a title", message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", agreeTitle: "Go to Settings", cancelTitle: "Cancel")
-        view.addSubview(alert)
-        alert.fadeIn(duration: 0.3)
-        alert.translatesAutoresizingMaskIntoConstraints = false
-        alert.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
-        alert.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
-        alert.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
-        alert.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
+alert.setupContents(accentColor: .purple, backgroundColor: .systemBackground, title: "I am a title", message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", agreeTitle: "Go to Settings", cancelTitle: "Cancel")
+view.addSubview(alert)
+alert.fadeIn(duration: 0.3)
+alert.translatesAutoresizingMaskIntoConstraints = false
+alert.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
+alert.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+alert.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
+alert.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
 ```
 
 Manage Actions:
@@ -123,7 +120,7 @@ Contributions are very welcome 🙌
 
 ```
 CustomAlert
-Copyright (c) 2023 Giada Ciotola giada@beatcode.it
+Copyright (c) 2023 Giada Ciotola giadaciotola@hotmail.it
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
