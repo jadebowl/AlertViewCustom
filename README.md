@@ -22,7 +22,7 @@
 
 # CustomAlert
 
-<p align="center">
+<p align="left">
 With CustomAlertView you can create a simple Alert instead of using the default one from Apple which doesn't always fit in with the style of your app.
 </p>
 
@@ -35,7 +35,8 @@ With CustomAlertView you can create a simple Alert instead of using the default 
 ## Example
 
 <p align="center">
-  <iframe src="https://player.vimeo.com/video/852321712?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1178" height="2556" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="Simulator Screen Recording - iPhone 14 Pro - 2023-08-07 at 14.28.31"></iframe>
+![lightmodealert](https://github.com/jadebowl/CustomAlertView/assets/57940508/0c2327f2-70e7-431c-b144-6e09d295a14a)
+![darkmodealert](https://github.com/jadebowl/CustomAlertView/assets/57940508/0ac2c3f6-73a0-482c-9645-f98c7e4d0e88)
 </p>
 
 ## Installation
