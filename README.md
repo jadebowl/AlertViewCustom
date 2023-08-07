@@ -1,7 +1,4 @@
 <p align="center">
-   <a href="https://developer.apple.com/swift/">
-      <img src="https://img.shields.io/badge/Swift-5.2-orange.svg?style=flat" alt="Swift 5.2">
-   </a>
    <a href="https://github.com/apple/swift-package-manager">
       <img src="https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg" alt="SPM">
    </a>
@@ -10,7 +7,7 @@
 # CustomAlertView
 
 <p align="left">
-With CustomAlertView you can create a simple Alert instead of using the default one from Apple, which doesn't always fit in with the style of your app.
+With CustomAlertView you can create a simple custom alert instead of using the default one from Apple, which doesn't always fit in with the style of your app.
 </p>
 
 ## Features
@@ -44,12 +41,12 @@ If you prefer not to use any of the aforementioned dependency managers, you can 
 ## Usage
 
 Create an AlertView:
-```ogdl
+```swift
 let alert = AlertView()
 ```
 
 Customise the UI, add Fade transition and Constraints:
-```ogdl
+```swift
 alert.delegate = self
 alert.setupContents(accentColor: .systemBlue, backgroundColor: .systemBackground, title: "I am a title", message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", agreeTitle: "Go to Settings", cancelTitle: "Cancel")
 view.addSubview(alert)
@@ -62,7 +59,7 @@ alert.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isAct
 ```
 
 Manage Actions:
-```ogdl
+```swift
 extension ViewController: AlertViewDelegate {
     func agreeAction() {
         // Example: Go to Settings
@@ -82,29 +79,3 @@ extension ViewController: AlertViewDelegate {
 
 ## Contributing
 Contributions are very welcome 🙌
-
-## License
-
-```
-CustomAlertView
-Copyright (c) 2023 Giada Ciotola giadaciotola@hotmail.it
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-```
-
