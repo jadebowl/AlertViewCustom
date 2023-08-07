@@ -2,15 +2,6 @@
    <a href="https://developer.apple.com/swift/">
       <img src="https://img.shields.io/badge/Swift-5.2-orange.svg?style=flat" alt="Swift 5.2">
    </a>
-   <a href="http://cocoapods.org/pods/CustomAlert">
-      <img src="https://img.shields.io/cocoapods/v/CustomAlert.svg?style=flat" alt="Version">
-   </a>
-   <a href="http://cocoapods.org/pods/CustomAlert">
-      <img src="https://img.shields.io/cocoapods/p/CustomAlert.svg?style=flat" alt="Platform">
-   </a>
-   <a href="https://github.com/Carthage/Carthage">
-      <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage Compatible">
-   </a>
    <a href="https://github.com/apple/swift-package-manager">
       <img src="https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg" alt="SPM">
    </a>
@@ -60,7 +51,7 @@ let alert = AlertView()
 Customise the UI, add Fade transition and Constraints:
 ```ogdl
 alert.delegate = self
-alert.setupContents(accentColor: .purple, backgroundColor: .systemBackground, title: "I am a title", message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", agreeTitle: "Go to Settings", cancelTitle: "Cancel")
+alert.setupContents(accentColor: .systemBlue, backgroundColor: .systemBackground, title: "I am a title", message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", agreeTitle: "Go to Settings", cancelTitle: "Cancel")
 view.addSubview(alert)
 alert.fadeIn(duration: 0.3)
 alert.translatesAutoresizingMaskIntoConstraints = false
@@ -95,7 +86,7 @@ Contributions are very welcome 🙌
 ## License
 
 ```
-CustomAlert
+CustomAlertView
 Copyright (c) 2023 Giada Ciotola giadaciotola@hotmail.it
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
