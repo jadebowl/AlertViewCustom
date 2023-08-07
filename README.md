@@ -1,8 +1,4 @@
 <p align="center">
-   <img width="200" src="https://raw.githubusercontent.com/SvenTiigi/SwiftKit/gh-pages/readMeAssets/SwiftKitLogo.png" alt="CustomAlert Logo">
-</p>
-
-<p align="center">
    <a href="https://developer.apple.com/swift/">
       <img src="https://img.shields.io/badge/Swift-5.2-orange.svg?style=flat" alt="Swift 5.2">
    </a>
@@ -20,10 +16,10 @@
    </a>
 </p>
 
-# CustomAlert
+# CustomAlertView
 
 <p align="left">
-With CustomAlertView you can create a simple Alert instead of using the default one from Apple which doesn't always fit in with the style of your app.
+With CustomAlertView you can create a simple Alert instead of using the default one from Apple, which doesn't always fit in with the style of your app.
 </p>
 
 ## Features
@@ -37,27 +33,6 @@ With CustomAlertView you can create a simple Alert instead of using the default 
 ![lightmodealert](https://github.com/jadebowl/CustomAlertView/assets/57940508/63501581-8b1b-4f3f-9f21-d671d4983fea)
 
 ## Installation
-
-### CocoaPods
-
-CustomAlertView is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```bash
-pod 'CustomAlert'
-```
-
-### Carthage
-
-[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
-
-To integrate CustomAlert into your Xcode project using Carthage, specify it in your `Cartfile`:
-
-```ogdl
-github "jadebowl/CustomAlertView"
-```
-
-Run `carthage update --use-xcframeworks` to build the framework and drag the built `CustomAlert.xcframework` bundles from Carthage/Build into the "Frameworks and Libraries" section of your application’s Xcode project.
 
 ### Swift Package Manager
 
@@ -84,6 +59,7 @@ let alert = AlertView()
 
 Customise the UI, add Fade transition and Constraints:
 ```ogdl
+alert.delegate = self
 alert.setupContents(accentColor: .purple, backgroundColor: .systemBackground, title: "I am a title", message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", agreeTitle: "Go to Settings", cancelTitle: "Cancel")
 view.addSubview(alert)
 alert.fadeIn(duration: 0.3)
@@ -98,7 +74,7 @@ Manage Actions:
 ```ogdl
 extension ViewController: AlertViewDelegate {
     func agreeAction() {
-        // MARK: - Example: Go to Settings
+        // Example: Go to Settings
         guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
         if UIApplication.shared.canOpenURL(settingsUrl) {
             UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
