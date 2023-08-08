@@ -52,17 +52,19 @@ import CustomAlert
 let alert = AlertView()
 ```
 
-Customise the UI, add Fade transition and Constraints:
+Customise the UI and add the Fade transition:
 ```swift
 alert.delegate = self
-alert.setupContents(accentColor: .systemBlue, backgroundColor: .systemBackground, title: "I am a title", message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", agreeTitle: "Go to Settings", cancelTitle: "Cancel")
-view.addSubview(alert)
+alert.setupContents(accentColor: .systemBlue,
+                            backgroundColor: .systemBackground,
+                            icon: UIImage(systemName: "hand.wave"),
+                            title: "I am a title",
+                            message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                            agreeTitle: "Go to Settings",
+                            cancelTitle: "Cancel",
+                            position: .bottom,
+                            hostVC: self)
 alert.fadeIn(duration: 0.3)
-alert.translatesAutoresizingMaskIntoConstraints = false
-alert.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
-alert.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
-alert.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
-alert.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
 ```
 
 Manage Actions:
