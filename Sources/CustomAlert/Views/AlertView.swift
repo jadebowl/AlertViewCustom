@@ -21,7 +21,6 @@ public class AlertView: UIView {
     @IBOutlet weak var alertTopConstraint: NSLayoutConstraint!
     
     public var delegate: AlertViewDelegate?
-    var viewModel: AlertViewModel?
     
     func setupXib() {
         contentView = loadViewFromNib()
@@ -31,8 +30,7 @@ public class AlertView: UIView {
         contentView.layer.cornerRadius = 16
     }
     
-    public func setupContents(accentColor: UIColor, backgroundColor: UIColor, icon: UIImage? = nil, title: String? = nil, message: String? = nil, agreeTitle: String, agreeCornerRadius: CGFloat = 16, cancelTitle: String? = nil, position: AlertPosition? = .center) {
-        let viewModel = AlertViewModel(accentColor: accentColor, backgroundColor: backgroundColor, icon: icon, title: title, message: message, agreeTitle: agreeTitle, agreeCornerRadius: agreeCornerRadius, cancelTitle: cancelTitle, position: position)
+    public func setupContents(accentColor: UIColor, backgroundColor: UIColor, icon: UIImage? = nil, title: String? = nil, message: String? = nil, agreeTitle: String, agreeCornerRadius: CGFloat = 16, cancelTitle: String? = nil, position: AlertPosition? = .center, hostVC: UIViewController) {
         backgroundView.backgroundColor = backgroundColor
         iconImageView.image = icon
         iconImageView.tintColor = accentColor
@@ -63,7 +61,12 @@ public class AlertView: UIView {
             alertTopConstraint.isActive = true
         }
         
-        self.viewModel = viewModel
+        hostVC.view.addSubview(self)
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.topAnchor.constraint(equalTo: hostVC.view.topAnchor, constant: 0).isActive = true
+        self.bottomAnchor.constraint(equalTo: hostVC.view.bottomAnchor, constant: 0).isActive = true
+        self.leadingAnchor.constraint(equalTo: hostVC.view.leadingAnchor, constant: 0).isActive = true
+        self.trailingAnchor.constraint(equalTo: hostVC.view.trailingAnchor, constant: 0).isActive = true
     }
     
     @IBAction func agreeAction(_ sender: UIButton) {
