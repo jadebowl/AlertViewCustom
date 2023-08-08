@@ -17,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E61A7632A82366D00BBB46F /* CustomAlertView */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CustomAlertView; sourceTree = "<group>"; };
 		8D38C2832A8109440074FEA0 /* CustomAlertExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomAlertExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D38C2862A8109440074FEA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D38C2882A8109440074FEA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,7 +26,6 @@
 		8D38C28F2A8109460074FEA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D38C2922A8109460074FEA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D38C2942A8109460074FEA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8D51AA3F2A8110A6006D4F32 /* CustomAlertView */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CustomAlertView; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,7 @@
 		8D38C29A2A8109890074FEA0 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				8D51AA3F2A8110A6006D4F32 /* CustomAlertView */,
+				0E61A7632A82366D00BBB46F /* CustomAlertView */,
 			);
 			name = Packages;
 			sourceTree = "<group>";

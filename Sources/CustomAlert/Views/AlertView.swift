@@ -10,6 +10,7 @@ public class AlertView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var backgroundView: UIView!
     
+    @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     
@@ -27,9 +28,11 @@ public class AlertView: UIView {
         contentView.layer.cornerRadius = 16
     }
     
-    public func setupContents(accentColor: UIColor, backgroundColor: UIColor, title: String, message: String, agreeTitle: String, cancelTitle: String) {
-        let viewModel = AlertViewModel(accentColor: accentColor, backgroundColor: backgroundColor, title: title, message: message, agreeTitle: agreeTitle, cancelTitle: cancelTitle)
+    public func setupContents(accentColor: UIColor, backgroundColor: UIColor, icon: UIImage? = nil, title: String, message: String, agreeTitle: String, cancelTitle: String) {
+        let viewModel = AlertViewModel(accentColor: accentColor, backgroundColor: backgroundColor, icon: icon, title: title, message: message, agreeTitle: agreeTitle, cancelTitle: cancelTitle)
         backgroundView.backgroundColor = backgroundColor
+        iconImageView.image = icon
+        iconImageView.isHidden = iconImageView.image == nil
         titleLabel.text = title
         messageLabel.text = message
         agreeButton.setTitle(agreeTitle, for: .normal)
