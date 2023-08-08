@@ -35,6 +35,7 @@ public class AlertView: UIView {
         let viewModel = AlertViewModel(accentColor: accentColor, backgroundColor: backgroundColor, icon: icon, title: title, message: message, agreeTitle: agreeTitle, agreeCornerRadius: agreeCornerRadius, cancelTitle: cancelTitle, position: position)
         backgroundView.backgroundColor = backgroundColor
         iconImageView.image = icon
+        iconImageView.tintColor = accentColor
         iconImageView.isHidden = iconImageView.image == nil
         titleLabel.text = title
         titleLabel.isHidden = titleLabel.text == nil
