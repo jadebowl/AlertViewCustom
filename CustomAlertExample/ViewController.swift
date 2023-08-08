@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     }
 
     func setupAlert() {
-        alert.setupContents(accentColor: .systemBlue, backgroundColor: .systemBackground, icon: UIImage(systemName: "hand.wave"), title: "I am a title", message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", agreeTitle: "Go to Settings", agreeCornerRadius: 30, cancelTitle: "Cancel", position: .bottom)
+        alert.setupContents(accentColor: .systemBlue, backgroundColor: .systemBackground, icon: UIImage(systemName: "hand.wave"), title: "I am a title", message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", agreeTitle: "Go to Settings", cancelTitle: "Cancel", position: .bottom)
         view.addSubview(alert)
         alert.fadeIn(duration: 0.3)
         alert.translatesAutoresizingMaskIntoConstraints = false
