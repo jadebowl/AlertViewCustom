@@ -9,8 +9,9 @@ public struct AlertViewModel {
     let agreeTitle: String
     let agreeCornerRadius: CGFloat
     let cancelTitle: String?
+    let position: AlertPosition?
    
-    public init(accentColor: UIColor, backgroundColor: UIColor, icon: UIImage? = nil, title: String? = nil, message: String? = nil, agreeTitle: String, agreeCornerRadius: CGFloat = 16, cancelTitle: String? = nil) {
+    public init(accentColor: UIColor, backgroundColor: UIColor, icon: UIImage? = nil, title: String? = nil, message: String? = nil, agreeTitle: String, agreeCornerRadius: CGFloat = 16, cancelTitle: String? = nil, position: AlertPosition? = .center) {
         self.accentColor = accentColor
         self.backgroundColor = backgroundColor
         self.icon = icon
@@ -19,5 +20,6 @@ public struct AlertViewModel {
         self.agreeTitle = agreeTitle
         self.agreeCornerRadius = agreeCornerRadius
         self.cancelTitle = cancelTitle
+        self.position = position
     }
 }

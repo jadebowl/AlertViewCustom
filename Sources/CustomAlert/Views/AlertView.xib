@@ -12,6 +12,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertView" customModuleProvider="target">
             <connections>
                 <outlet property="agreeButton" destination="jLk-J5-99Y" id="hbt-GM-Qfv"/>
+                <outlet property="alertCenterConstraint" destination="zPs-S0-ygG" id="ef3-vm-7hS"/>
+                <outlet property="alertTopConstraint" destination="hk8-Ru-vFD" id="QPX-ZH-6Ax"/>
                 <outlet property="backgroundView" destination="E4E-5m-dQn" id="RCZ-d9-J1E"/>
                 <outlet property="cancelButton" destination="CLd-Vh-Zvm" id="p4h-Ac-OJn"/>
                 <outlet property="contentView" destination="arq-vK-wXR" id="Ijw-g0-dXs"/>

@@ -17,6 +17,9 @@ public class AlertView: UIView {
     @IBOutlet weak var agreeButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     
+    @IBOutlet weak var alertCenterConstraint: NSLayoutConstraint!
+    @IBOutlet weak var alertTopConstraint: NSLayoutConstraint!
+    
     public var delegate: AlertViewDelegate?
     var viewModel: AlertViewModel?
     
@@ -28,8 +31,8 @@ public class AlertView: UIView {
         contentView.layer.cornerRadius = 16
     }
     
-    public func setupContents(accentColor: UIColor, backgroundColor: UIColor, icon: UIImage? = nil, title: String? = nil, message: String? = nil, agreeTitle: String, agreeCornerRadius: CGFloat = 16, cancelTitle: String? = nil) {
-        let viewModel = AlertViewModel(accentColor: accentColor, backgroundColor: backgroundColor, icon: icon, title: title, message: message, agreeTitle: agreeTitle, agreeCornerRadius: agreeCornerRadius, cancelTitle: cancelTitle)
+    public func setupContents(accentColor: UIColor, backgroundColor: UIColor, icon: UIImage? = nil, title: String? = nil, message: String? = nil, agreeTitle: String, agreeCornerRadius: CGFloat = 16, cancelTitle: String? = nil, position: AlertPosition? = .center) {
+        let viewModel = AlertViewModel(accentColor: accentColor, backgroundColor: backgroundColor, icon: icon, title: title, message: message, agreeTitle: agreeTitle, agreeCornerRadius: agreeCornerRadius, cancelTitle: cancelTitle, position: position)
         backgroundView.backgroundColor = backgroundColor
         iconImageView.image = icon
         iconImageView.isHidden = iconImageView.image == nil
@@ -44,6 +47,21 @@ public class AlertView: UIView {
         cancelButton.setTitle(cancelTitle, for: .normal)
         cancelButton.setTitleColor(accentColor, for: .normal)
         cancelButton.isHidden = cancelTitle == nil
+        
+        switch position {
+        case .bottom:
+            backgroundView.translatesAutoresizingMaskIntoConstraints = false
+            alertCenterConstraint.isActive = false
+            alertTopConstraint.isActive = false
+            
+            backgroundView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -32).isActive = true
+            
+        default:
+            backgroundView.translatesAutoresizingMaskIntoConstraints = false
+            alertCenterConstraint.isActive = true
+            alertTopConstraint.isActive = true
+        }
+        
         self.viewModel = viewModel
     }
     
