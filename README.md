@@ -21,13 +21,9 @@ With CustomAlertView you can create a simple custom alert instead of using the d
 - Change View Background Color
 
 ## Example
-| Fade In and Out | 
-| ------------- | 
-|![lightmodealert](https://github.com/jadebowl/CustomAlertView/assets/57940508/63501581-8b1b-4f3f-9f21-d671d4983fea)|
-
 | Position and No Title | Radius and No Message | Icon and Color | One Button |
 | ------------- | ------------- | ------------- | ------------- |
-| <img src="https://i.ibb.co/MDtVJSw/259062457-4bb75d54-0128-4dbe-a2b7-42341b50c8ee.png" alt="positionnotitle" width="222"> | <img src="https://i.ibb.co/F5Wj6dY/259063113-36cadbe4-914b-458b-a568-24aca26da015.png" alt="radiusnomessage" width="222"> | <img src="https://i.ibb.co/X4T9dTr/259059050-e83aa78d-b385-462d-8db0-fd2171245ff5.png" alt="iconandcolor" width="222"> | <img src="https://i.ibb.co/sRtHGT1/259062783-6ee53f09-219c-4cb3-b8b0-20c520ec86bf.png" alt="onebutton" width="222"> |
+| <img src="https://i.ibb.co/BqSsqfS/positionmessage.png" alt="positionnotitle" width="222"> | <img src="https://i.ibb.co/KV48H8z/onlytitlecorner.png" alt="radiusnomessage" width="222"> | <img src="https://i.ibb.co/fGwxSr4/icontitle.png" alt="iconandcolor" width="222"> | <img src="https://i.ibb.co/Jm4kZP4/onebutton.png" alt="onebutton" width="222"> |
 
 ## Installation
 
@@ -51,6 +47,8 @@ If you prefer not to use any of the aforementioned dependency managers, you can 
 
 Create an AlertView:
 ```swift
+import CustomAlert
+
 let alert = AlertView()
 ```
 
