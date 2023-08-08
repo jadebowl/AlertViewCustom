@@ -27,7 +27,7 @@ With CustomAlertView you can create a simple custom alert instead of using the d
 
 | Position and No Title | Radius and No Message | Icon and Color | One Button |
 | ------------- | ------------- | ------------- | ------------- |
-| ![positionandnotitle](https://github.com/jadebowl/CustomAlertView/assets/57940508/4bb75d54-0128-4dbe-a2b7-42341b50c8ee) | ![radiusandnomessage](https://github.com/jadebowl/CustomAlertView/assets/57940508/36cadbe4-914b-458b-a568-24aca26da015) | ![iconandcolor](https://github.com/jadebowl/CustomAlertView/assets/57940508/e83aa78d-b385-462d-8db0-fd2171245ff5)| ![onebutton](https://github.com/jadebowl/CustomAlertView/assets/57940508/6ee53f09-219c-4cb3-b8b0-20c520ec86bf) |
+| <img src="https://i.ibb.co/MDtVJSw/259062457-4bb75d54-0128-4dbe-a2b7-42341b50c8ee.png" alt="positionnotitle" width="222"> | <img src="https://i.ibb.co/F5Wj6dY/259063113-36cadbe4-914b-458b-a568-24aca26da015.png" alt="radiusnomessage" width="222"> | <img src="https://i.ibb.co/X4T9dTr/259059050-e83aa78d-b385-462d-8db0-fd2171245ff5.png" alt="iconandcolor" width="222"> | <img src="https://i.ibb.co/sRtHGT1/259062783-6ee53f09-219c-4cb3-b8b0-20c520ec86bf.png" alt="onebutton" width="222"> |
 
 ## Installation
 
