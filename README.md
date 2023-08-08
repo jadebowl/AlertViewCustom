@@ -12,13 +12,22 @@ With CustomAlertView you can create a simple custom alert instead of using the d
 
 ## Features
 
+- Add Icon
 - Personalise Title, Message and both Buttons
-- Change Accent Color
-- Change Background Color
+- Possibility to hide Title, Message and Cancel Button
+- Change Alert Position (.center or .bottom)
+- Change Agree Button Corner Radius
+- Change Agree Button Color
+- Change View Background Color
 
 ## Example
+| Fade In and Out | 
+| ------------- | 
+|![lightmodealert](https://github.com/jadebowl/CustomAlertView/assets/57940508/63501581-8b1b-4f3f-9f21-d671d4983fea)|
 
-![lightmodealert](https://github.com/jadebowl/CustomAlertView/assets/57940508/63501581-8b1b-4f3f-9f21-d671d4983fea)
+| Position and No Title | Radius and No Message | Icon and Color | One Button |
+| ------------- | ------------- | ------------- | ------------- |
+| ![positionandnotitle](https://github.com/jadebowl/CustomAlertView/assets/57940508/4bb75d54-0128-4dbe-a2b7-42341b50c8ee) | ![radiusandnomessage](https://github.com/jadebowl/CustomAlertView/assets/57940508/36cadbe4-914b-458b-a568-24aca26da015) | ![iconandcolor](https://github.com/jadebowl/CustomAlertView/assets/57940508/e83aa78d-b385-462d-8db0-fd2171245ff5)| ![onebutton](https://github.com/jadebowl/CustomAlertView/assets/57940508/6ee53f09-219c-4cb3-b8b0-20c520ec86bf) |
 
 ## Installation
 
