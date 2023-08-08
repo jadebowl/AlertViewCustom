@@ -28,13 +28,15 @@ public class AlertView: UIView {
         contentView.layer.cornerRadius = 16
     }
     
-    public func setupContents(accentColor: UIColor, backgroundColor: UIColor, icon: UIImage? = nil, title: String, message: String, agreeTitle: String, agreeCornerRadius: CGFloat = 16, cancelTitle: String) {
+    public func setupContents(accentColor: UIColor, backgroundColor: UIColor, icon: UIImage? = nil, title: String? = nil, message: String? = nil, agreeTitle: String, agreeCornerRadius: CGFloat = 16, cancelTitle: String) {
         let viewModel = AlertViewModel(accentColor: accentColor, backgroundColor: backgroundColor, icon: icon, title: title, message: message, agreeTitle: agreeTitle, agreeCornerRadius: agreeCornerRadius, cancelTitle: cancelTitle)
         backgroundView.backgroundColor = backgroundColor
         iconImageView.image = icon
         iconImageView.isHidden = iconImageView.image == nil
         titleLabel.text = title
+        titleLabel.isHidden = titleLabel.text == nil
         messageLabel.text = message
+        messageLabel.isHidden = messageLabel.text == nil
         agreeButton.setTitle(agreeTitle, for: .normal)
         agreeButton.setTitleColor(accentColor.contrastColor(), for: .normal)
         agreeButton.backgroundColor = accentColor
