@@ -8,9 +8,9 @@ public struct AlertViewModel {
     let message: String?
     let agreeTitle: String
     let agreeCornerRadius: CGFloat
-    let cancelTitle: String
+    let cancelTitle: String?
    
-    public init(accentColor: UIColor, backgroundColor: UIColor, icon: UIImage? = nil, title: String? = nil, message: String? = nil, agreeTitle: String, agreeCornerRadius: CGFloat = 16, cancelTitle: String) {
+    public init(accentColor: UIColor, backgroundColor: UIColor, icon: UIImage? = nil, title: String? = nil, message: String? = nil, agreeTitle: String, agreeCornerRadius: CGFloat = 16, cancelTitle: String? = nil) {
         self.accentColor = accentColor
         self.backgroundColor = backgroundColor
         self.icon = icon

@@ -28,7 +28,7 @@ public class AlertView: UIView {
         contentView.layer.cornerRadius = 16
     }
     
-    public func setupContents(accentColor: UIColor, backgroundColor: UIColor, icon: UIImage? = nil, title: String? = nil, message: String? = nil, agreeTitle: String, agreeCornerRadius: CGFloat = 16, cancelTitle: String) {
+    public func setupContents(accentColor: UIColor, backgroundColor: UIColor, icon: UIImage? = nil, title: String? = nil, message: String? = nil, agreeTitle: String, agreeCornerRadius: CGFloat = 16, cancelTitle: String? = nil) {
         let viewModel = AlertViewModel(accentColor: accentColor, backgroundColor: backgroundColor, icon: icon, title: title, message: message, agreeTitle: agreeTitle, agreeCornerRadius: agreeCornerRadius, cancelTitle: cancelTitle)
         backgroundView.backgroundColor = backgroundColor
         iconImageView.image = icon
@@ -43,6 +43,7 @@ public class AlertView: UIView {
         agreeButton.layer.cornerRadius = agreeCornerRadius
         cancelButton.setTitle(cancelTitle, for: .normal)
         cancelButton.setTitleColor(accentColor, for: .normal)
+        cancelButton.isHidden = cancelTitle == nil
         self.viewModel = viewModel
     }
     
