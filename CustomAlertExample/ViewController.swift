@@ -18,7 +18,15 @@ class ViewController: UIViewController {
     }
 
     func setupAlert() {
-        alert.setupContents(accentColor: .systemBlue, backgroundColor: .systemBackground, icon: UIImage(systemName: "hand.wave"), title: "I am a title", message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", agreeTitle: "Go to Settings", cancelTitle: "Cancel", position: .bottom, hostVC: self)
+        alert.setupContents(accentColor: .systemBlue,
+                            backgroundColor: .systemBackground,
+                            icon: UIImage(systemName: "hand.wave"),
+                            title: "I am a title",
+                            message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                            agreeTitle: "Go to Settings",
+                            cancelTitle: "Cancel",
+                            position: .bottom,
+                            hostVC: self)
         alert.fadeIn(duration: 0.3)
     }
 
