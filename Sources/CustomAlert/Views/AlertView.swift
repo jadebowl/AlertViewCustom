@@ -30,7 +30,8 @@ public class AlertView: UIView {
         contentView.layer.cornerRadius = 16
     }
     
-    public func setupContents(accentColor: UIColor, backgroundColor: UIColor, icon: UIImage? = nil, title: String? = nil, message: String? = nil, agreeTitle: String, agreeCornerRadius: CGFloat = 16, cancelTitle: String? = nil, position: AlertPosition? = .center, hostVC: UIViewController) {
+    public func setupContents(accentColor: UIColor, backgroundColor: UIColor, icon: UIImage? = nil, cornerRadius: CGFloat = 16, title: String? = nil, message: String? = nil, agreeTitle: String, agreeCornerRadius: CGFloat = 16, cancelTitle: String? = nil, position: AlertPosition? = .center, hostVC: UIViewController) {
+        contentView.layer.cornerRadius = cornerRadius
         backgroundView.backgroundColor = backgroundColor
         iconImageView.image = icon
         iconImageView.tintColor = accentColor
