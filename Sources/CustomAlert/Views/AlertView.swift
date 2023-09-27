@@ -70,7 +70,7 @@ public class AlertView: UIView {
         
         if bottomAnimation {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                self.alertBottomConstraint?.constant = -128
+                self.alertBottomConstraint?.constant = -96
                 UIView.animate(withDuration: 0.5) {
                     self.contentView.layoutIfNeeded()
                 }
