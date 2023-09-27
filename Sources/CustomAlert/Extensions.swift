@@ -39,7 +39,8 @@ public extension UIView {
     }
     
     func removeFromSuperView(duration: TimeInterval) {
-        UIView.animate(withDuration: duration, animations: {self.alpha = 0.0}, completion: {(value: Bool) in
+        UIView.animate(withDuration: duration, animations: {
+            self.alpha = 0.0 }, completion: {( value: Bool ) in
             self.removeFromSuperview()
         })
     }
