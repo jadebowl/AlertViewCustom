@@ -21,7 +21,7 @@ public class AlertView: UIView {
     @IBOutlet weak var alertTopConstraint: NSLayoutConstraint!
     
     var alertBottomConstraint: NSLayoutConstraint?
-    var alertAnimation: AlertAnimation? = .no
+    var alertBottomAnimation = false
     
     public var delegate: AlertViewDelegate?
     
@@ -32,7 +32,7 @@ public class AlertView: UIView {
         contentView.backgroundColor = .clear
     }
     
-    public func setupContents(accentColor: UIColor, backgroundColor: UIColor, backgroundRadius: CGFloat = 16, icon: UIImage? = nil, title: String? = nil, message: String? = nil, agreeTitle: String, agreeCornerRadius: CGFloat = 16, cancelTitle: String? = nil, position: AlertPosition? = .center, animation: AlertAnimation? = .no, hostVC: UIViewController) {
+    public func setupContents(accentColor: UIColor, backgroundColor: UIColor, backgroundRadius: CGFloat = 16, icon: UIImage? = nil, title: String? = nil, message: String? = nil, agreeTitle: String, agreeCornerRadius: CGFloat = 16, cancelTitle: String? = nil, position: AlertPosition? = .center, bottomAnimation: Bool = false, hostVC: UIViewController) {
         backgroundView.backgroundColor = backgroundColor
         backgroundView.layer.cornerRadius = backgroundRadius
         iconImageView.image = icon
@@ -49,7 +49,7 @@ public class AlertView: UIView {
         cancelButton.setTitle(cancelTitle, for: .normal)
         cancelButton.setTitleColor(accentColor, for: .normal)
         cancelButton.isHidden = cancelTitle == nil
-        alertAnimation = animation
+        alertBottomAnimation = bottomAnimation
         
         switch position {
         case .bottom:
@@ -59,7 +59,6 @@ public class AlertView: UIView {
             
             alertBottomConstraint = backgroundView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -32)
             alertBottomConstraint?.isActive = true
-            print("consrtaint: \(alertBottomConstraint?.constant ?? 0)")
             
         default:
             backgroundView.translatesAutoresizingMaskIntoConstraints = false
@@ -69,20 +68,13 @@ public class AlertView: UIView {
             alertBottomConstraint?.isActive = false
         }
         
-        switch animation {
-        case .fromBottom:
+        if bottomAnimation {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 self.alertBottomConstraint?.constant = -128
                 UIView.animate(withDuration: 0.5) {
                     self.contentView.layoutIfNeeded()
                 }
             }
-            
-            
-            print("consrtaint: \(alertBottomConstraint?.constant ?? 0)")
-        case .fromTop:
-            break
-        default: break
         }
         
         hostVC.view.addSubview(self)
@@ -98,19 +90,15 @@ public class AlertView: UIView {
     }
     
     @IBAction func cancelAction(_ sender: UIButton) {
-        switch alertAnimation {
-        case .fromBottom:
+        if alertBottomAnimation {
             alertBottomConstraint?.constant = -32
             UIView.animate(withDuration: 0.5) {
                 self.contentView.layoutIfNeeded()
                 self.delegate?.cancelAction()
             }
-            print("consrtaint: \(alertBottomConstraint?.constant ?? 0)")
-        case .fromTop:
-            break
-        default: break
+        } else {
+            delegate?.cancelAction()
         }
-        
     }
     
     func loadViewFromNib() -> UIView? {
