@@ -20,6 +20,9 @@ public class AlertView: UIView {
     @IBOutlet weak var alertCenterConstraint: NSLayoutConstraint!
     @IBOutlet weak var alertTopConstraint: NSLayoutConstraint!
     
+    var alertBottomConstraint: NSLayoutConstraint?
+    var alertBottomAnimation = false
+    
     public var delegate: AlertViewDelegate?
     
     func setupXib() {
@@ -27,10 +30,9 @@ public class AlertView: UIView {
         addSubview(contentView)
         contentView.frame = bounds
         contentView.backgroundColor = .clear
-        contentView.layer.cornerRadius = 16
     }
     
-     public func setupContents(accentColor: UIColor, backgroundColor: UIColor, backgroundRadius: CGFloat = 16, icon: UIImage? = nil, title: String? = nil, message: String? = nil, agreeTitle: String, agreeCornerRadius: CGFloat = 16, cancelTitle: String? = nil, position: AlertPosition? = .center, hostVC: UIViewController) {
+    public func setupContents(accentColor: UIColor, backgroundColor: UIColor, backgroundRadius: CGFloat = 16, icon: UIImage? = nil, title: String? = nil, message: String? = nil, agreeTitle: String, agreeCornerRadius: CGFloat = 16, cancelTitle: String? = nil, position: AlertPosition? = .center, bottomAnimation: Bool = false, hostVC: UIViewController) {
         backgroundView.backgroundColor = backgroundColor
         backgroundView.layer.cornerRadius = backgroundRadius
         iconImageView.image = icon
@@ -47,19 +49,23 @@ public class AlertView: UIView {
         cancelButton.setTitle(cancelTitle, for: .normal)
         cancelButton.setTitleColor(accentColor, for: .normal)
         cancelButton.isHidden = cancelTitle == nil
+        alertBottomAnimation = bottomAnimation
         
         switch position {
         case .bottom:
             backgroundView.translatesAutoresizingMaskIntoConstraints = false
-            alertCenterConstraint.isActive = false
-            alertTopConstraint.isActive = false
+            alertCenterConstraint?.isActive = false
+            alertTopConstraint?.isActive = false
             
-            backgroundView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -32).isActive = true
+            alertBottomConstraint = backgroundView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -32)
+            alertBottomConstraint?.isActive = true
             
         default:
             backgroundView.translatesAutoresizingMaskIntoConstraints = false
-            alertCenterConstraint.isActive = true
-            alertTopConstraint.isActive = true
+            alertCenterConstraint?.isActive = true
+            alertTopConstraint?.isActive = true
+            
+            alertBottomConstraint?.isActive = false
         }
         
         hostVC.view.addSubview(self)
@@ -68,6 +74,23 @@ public class AlertView: UIView {
         self.bottomAnchor.constraint(equalTo: hostVC.view.bottomAnchor, constant: 0).isActive = true
         self.leadingAnchor.constraint(equalTo: hostVC.view.leadingAnchor, constant: 0).isActive = true
         self.trailingAnchor.constraint(equalTo: hostVC.view.trailingAnchor, constant: 0).isActive = true
+        self.alpha = 0.0
+    }
+    
+    public func fadeIn(duration: TimeInterval) {
+        if alertBottomAnimation {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                self.alertBottomConstraint?.constant = -96
+                UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut) {
+                    self.contentView.layoutIfNeeded()
+                    self.alpha = 1
+                }
+            }
+        } else {
+            UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut) {
+                self.alpha = 1
+            }
+        }
     }
     
     @IBAction func agreeAction(_ sender: UIButton) {
@@ -75,7 +98,15 @@ public class AlertView: UIView {
     }
     
     @IBAction func cancelAction(_ sender: UIButton) {
-        delegate?.cancelAction()
+        if alertBottomAnimation {
+            alertBottomConstraint?.constant = -32
+            UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseOut) {
+                self.contentView.layoutIfNeeded()
+                self.delegate?.cancelAction()
+            }
+        } else {
+            delegate?.cancelAction()
+        }
     }
     
     func loadViewFromNib() -> UIView? {

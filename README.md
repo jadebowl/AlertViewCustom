@@ -20,6 +20,10 @@ With CustomAlertView you can create a simple custom alert instead of using the d
 - Change Agree Button Color
 - Change View Background Color
 
+### Latest:
+- Possibility to change Corner Radius of the whole AlertView
+- Added Animation from the Bottom when in .bottom Position
+
 ## Example
 | Position and No Title | Radius and No Message | Icon and Color | One Button |
 | ------------- | ------------- | ------------- | ------------- |

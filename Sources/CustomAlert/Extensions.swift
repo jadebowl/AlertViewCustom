@@ -22,24 +22,18 @@ internal extension UIColor {
         let luminance = 1 - ((0.299 * r) + (0.587 * g) + (0.114 * b))
         
         if luminance < 0.5 {
-            d = CGFloat(0) /// bright colors - black font
+            d = CGFloat(0)
         } else {
-            d = CGFloat(1) /// dark colors - white font
+            d = CGFloat(1)
         }
-        
         return UIColor(red: d, green: d, blue: d, alpha: 1)
     }
 }
 
 public extension UIView {
-    func fadeIn(duration: TimeInterval) {
-        UIView.animate(withDuration: duration, animations: {
-            self.alpha = 1
-        })
-    }
-    
     func removeFromSuperView(duration: TimeInterval) {
-        UIView.animate(withDuration: duration, animations: {self.alpha = 0.0}, completion: {(value: Bool) in
+        UIView.animate(withDuration: duration, animations: {
+            self.alpha = 0.0 }, completion: {( value: Bool ) in
             self.removeFromSuperview()
         })
     }
