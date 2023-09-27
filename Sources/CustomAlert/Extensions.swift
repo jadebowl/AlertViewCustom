@@ -22,11 +22,10 @@ internal extension UIColor {
         let luminance = 1 - ((0.299 * r) + (0.587 * g) + (0.114 * b))
         
         if luminance < 0.5 {
-            d = CGFloat(0) /// bright colors - black font
+            d = CGFloat(0)
         } else {
-            d = CGFloat(1) /// dark colors - white font
+            d = CGFloat(1)
         }
-        
         return UIColor(red: d, green: d, blue: d, alpha: 1)
     }
 }
