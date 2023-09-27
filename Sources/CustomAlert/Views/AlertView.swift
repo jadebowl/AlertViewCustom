@@ -68,21 +68,29 @@ public class AlertView: UIView {
             alertBottomConstraint?.isActive = false
         }
         
-        if bottomAnimation {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                self.alertBottomConstraint?.constant = -96
-                UIView.animate(withDuration: 0.5) {
-                    self.contentView.layoutIfNeeded()
-                }
-            }
-        }
-        
         hostVC.view.addSubview(self)
         self.translatesAutoresizingMaskIntoConstraints = false
         self.topAnchor.constraint(equalTo: hostVC.view.topAnchor, constant: 0).isActive = true
         self.bottomAnchor.constraint(equalTo: hostVC.view.bottomAnchor, constant: 0).isActive = true
         self.leadingAnchor.constraint(equalTo: hostVC.view.leadingAnchor, constant: 0).isActive = true
         self.trailingAnchor.constraint(equalTo: hostVC.view.trailingAnchor, constant: 0).isActive = true
+        self.alpha = 0.0
+    }
+    
+    public func fadeIn(duration: TimeInterval) {
+        if alertBottomAnimation {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                self.alertBottomConstraint?.constant = -96
+                UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut) {
+                    self.contentView.layoutIfNeeded()
+                    self.alpha = 1
+                }
+            }
+        } else {
+            UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut) {
+                self.alpha = 1
+            }
+        }
     }
     
     @IBAction func agreeAction(_ sender: UIButton) {
@@ -92,7 +100,7 @@ public class AlertView: UIView {
     @IBAction func cancelAction(_ sender: UIButton) {
         if alertBottomAnimation {
             alertBottomConstraint?.constant = -32
-            UIView.animate(withDuration: 0.5) {
+            UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseOut) {
                 self.contentView.layoutIfNeeded()
                 self.delegate?.cancelAction()
             }
