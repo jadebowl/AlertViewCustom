@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0E61A7632A82366D00BBB46F /* CustomAlertView */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CustomAlertView; sourceTree = "<group>"; };
+		0E45024A2AC43F4900597094 /* CustomAlertView */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CustomAlertView; sourceTree = "<group>"; };
 		8D38C2832A8109440074FEA0 /* CustomAlertExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomAlertExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D38C2862A8109440074FEA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D38C2882A8109440074FEA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 		8D38C29A2A8109890074FEA0 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				0E61A7632A82366D00BBB46F /* CustomAlertView */,
+				0E45024A2AC43F4900597094 /* CustomAlertView */,
 			);
 			name = Packages;
 			sourceTree = "<group>";

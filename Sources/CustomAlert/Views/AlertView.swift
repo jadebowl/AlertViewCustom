@@ -30,7 +30,7 @@ public class AlertView: UIView {
         contentView.layer.cornerRadius = 16
     }
     
-     public func setupContents(accentColor: UIColor, backgroundColor: UIColor, backgroundRadius: CGFloat = 16, icon: UIImage? = nil, title: String? = nil, message: String? = nil, agreeTitle: String, agreeCornerRadius: CGFloat = 16, cancelTitle: String? = nil, position: AlertPosition? = .center, hostVC: UIViewController) {
+    public func setupContents(accentColor: UIColor, backgroundColor: UIColor, backgroundRadius: CGFloat = 16, icon: UIImage? = nil, title: String? = nil, message: String? = nil, agreeTitle: String, agreeCornerRadius: CGFloat = 16, cancelTitle: String? = nil, position: AlertPosition? = .center, animation: AlertAnimation? = .no, hostVC: UIViewController) {
         backgroundView.backgroundColor = backgroundColor
         backgroundView.layer.cornerRadius = backgroundRadius
         iconImageView.image = icon
@@ -60,6 +60,14 @@ public class AlertView: UIView {
             backgroundView.translatesAutoresizingMaskIntoConstraints = false
             alertCenterConstraint.isActive = true
             alertTopConstraint.isActive = true
+        }
+        
+        switch animation {
+        case .fromBottom:
+            break // TODO: - Animate from the top
+        case .fromTop:
+            break // TODO: - Animate from the top
+        default: break
         }
         
         hostVC.view.addSubview(self)

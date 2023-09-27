@@ -26,6 +26,7 @@ class ViewController: UIViewController {
                             agreeTitle: "Go to Settings",
                             cancelTitle: "Cancel",
                             position: .bottom,
+                            animation: .fromBottom,
                             hostVC: self)
         alert.fadeIn(duration: 0.3)
     }
