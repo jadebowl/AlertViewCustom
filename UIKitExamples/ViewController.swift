@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  CustomAlertExample
+//  UIKitExamples
 //
-//  Created by Jade Bowl on 07/08/23.
+//  Created by Giada Ciotola on 28/09/23.
 //
 
 import UIKit
@@ -51,3 +51,5 @@ extension ViewController: AlertViewDelegate {
         alert.removeFromSuperView(duration: 0.3)
     }
 }
+
+

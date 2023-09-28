@@ -3,7 +3,7 @@ import UIKit
 internal extension UIViewController {
     static func loadFromNib() -> Self {
         func instantiateFromNib<T: UIViewController>() -> T {
-            return T.init(nibName: String(describing: T.self), bundle: .module)
+            return T.init(nibName: String(describing: T.self), bundle: .main)
         }
         return instantiateFromNib()
     }

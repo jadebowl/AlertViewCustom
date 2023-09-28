@@ -110,7 +110,8 @@ public class AlertView: UIView {
     }
     
     func loadViewFromNib() -> UIView? {
-        let nib = UINib(nibName: "AlertView", bundle: .module)
+        let bundle = Bundle(for: type(of: self))
+        let nib = UINib(nibName: "AlertView", bundle: bundle)
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
     
