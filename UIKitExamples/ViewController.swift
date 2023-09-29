@@ -14,11 +14,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        alert.delegate = self
+        AlertWindow.shared.delegate = self
     }
 
     func setupAlert() {
-        alert.setupContents(accentColor: .systemBlue,
+        AlertWindow.shared.setupContents(accentColor: .systemBlue,
                             backgroundColor: .systemBackground,
                             icon: UIImage(systemName: "hand.wave"),
                             title: "I am a title",
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
                             position: .bottom,
                             bottomAnimation: true,
                             hostVC: self)
-        alert.fadeIn(duration: 0.3)
+        AlertWindow.shared.fadeIn(duration: 0.3)
     }
 
     @IBAction func showAlert(_ sender: UIButton) {
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: AlertViewDelegate {
+extension ViewController: AlertWindowDelegate {
     func agreeAction() {
         // MARK: - Example: Go to Settings
         guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
@@ -48,7 +48,7 @@ extension ViewController: AlertViewDelegate {
     }
     
     func cancelAction() {
-        alert.removeFromSuperView(duration: 0.3)
+        AlertWindow.shared.removeFromSuperView(duration: 0.3)
     }
 }
 

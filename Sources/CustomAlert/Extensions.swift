@@ -29,12 +29,3 @@ internal extension UIColor {
         return UIColor(red: d, green: d, blue: d, alpha: 1)
     }
 }
-
-public extension UIView {
-    func removeFromSuperView(duration: TimeInterval) {
-        UIView.animate(withDuration: duration, animations: {
-            self.alpha = 0.0 }, completion: {( value: Bool ) in
-            self.removeFromSuperview()
-        })
-    }
-}

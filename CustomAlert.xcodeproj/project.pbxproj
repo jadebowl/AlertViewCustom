@@ -10,6 +10,7 @@
 		0E2FCC1E2AC74100004AD885 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6AE572AC5E07000C4E0FE /* Enums.swift */; };
 		0E2FCC1F2AC7411B004AD885 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6AE582AC5E07000C4E0FE /* Extensions.swift */; };
 		0E2FCC212AC748B4004AD885 /* AlertViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2FCC202AC748B4004AD885 /* AlertViewRepresentable.swift */; };
+		0E2FCC262AC75355004AD885 /* AlertWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2FCC252AC75355004AD885 /* AlertWindow.swift */; };
 		0EA6AE152AC5DE9900C4E0FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6AE142AC5DE9900C4E0FE /* AppDelegate.swift */; };
 		0EA6AE192AC5DE9900C4E0FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6AE182AC5DE9900C4E0FE /* ViewController.swift */; };
 		0EA6AE1C2AC5DE9900C4E0FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA6AE1A2AC5DE9900C4E0FE /* Main.storyboard */; };
@@ -80,6 +81,7 @@
 
 /* Begin PBXFileReference section */
 		0E2FCC202AC748B4004AD885 /* AlertViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewRepresentable.swift; sourceTree = "<group>"; };
+		0E2FCC252AC75355004AD885 /* AlertWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertWindow.swift; sourceTree = "<group>"; };
 		0EA6AE122AC5DE9900C4E0FE /* UIKitExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA6AE142AC5DE9900C4E0FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EA6AE182AC5DE9900C4E0FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E2FCC282AC753E9004AD885 /* Window */ = {
+			isa = PBXGroup;
+			children = (
+				0E2FCC252AC75355004AD885 /* AlertWindow.swift */,
+			);
+			path = Window;
+			sourceTree = "<group>";
+		};
 		0EA6ADD22AC5DE1300C4E0FE = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +192,7 @@
 		0EA6AE4A2AC5DF9C00C4E0FE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				0E2FCC282AC753E9004AD885 /* Window */,
 				0EA6AE5F2AC5E07D00C4E0FE /* Views */,
 				0EA6AE572AC5E07000C4E0FE /* Enums.swift */,
 				0EA6AE582AC5E07000C4E0FE /* Extensions.swift */,
@@ -377,6 +388,7 @@
 				0EA6AE592AC5E07000C4E0FE /* Enums.swift in Sources */,
 				0EA6AE5A2AC5E07100C4E0FE /* Extensions.swift in Sources */,
 				0E2FCC212AC748B4004AD885 /* AlertViewRepresentable.swift in Sources */,
+				0E2FCC262AC75355004AD885 /* AlertWindow.swift in Sources */,
 				0EA6AE5E2AC5E07900C4E0FE /* AlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
