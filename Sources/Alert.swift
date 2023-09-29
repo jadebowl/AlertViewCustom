@@ -13,7 +13,6 @@ public protocol AlertDelegate {
 }
 
 public class Alert {
-    
     public var delegate: AlertDelegate? {
         didSet {
             alertView.delegate = delegate
@@ -86,7 +85,6 @@ public class Alert {
     }
     
     public func fadeIn(duration: TimeInterval) {
-        
         if let activeScene = UIApplication.shared.activeWindowScene {
             alertWindow.windowScene = activeScene
             alertWindow.frame = activeScene.coordinateSpace.bounds
@@ -111,7 +109,6 @@ public class Alert {
     }
     
     public func removeFromSuperView(duration: TimeInterval) {
-        
         if alertView.alertBottomAnimation {
             alertView.alertBottomConstraint?.constant = -32
         }

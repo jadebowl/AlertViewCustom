@@ -28,7 +28,6 @@ struct ContentView: View {
     }
     
     private func showAlert() {
-        
         alert.setupContents(delegate: self,
                             accentColor: .systemBlue,
                             backgroundColor: .systemBackground,
@@ -58,8 +57,6 @@ extension ContentView: AlertDelegate {
         alert.removeFromSuperView(duration: 0.3)
     }
 }
-
-
 
 #Preview {
     ContentView()
