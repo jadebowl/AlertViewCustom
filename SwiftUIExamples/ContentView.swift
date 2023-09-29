@@ -42,7 +42,6 @@ struct ContentView: View {
 }
 
 extension ContentView: AlertDelegate {
-    
     func agreeAction() {
         // MARK: - Example: Go to Settings
         guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }

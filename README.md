@@ -11,7 +11,8 @@ With CustomAlertView you can create a simple custom alert instead of using the d
 </p>
 
 ## Features
-
+- Can be used both in UIKit and SwiftUI
+ 
 - Add Icon
 - Personalise Title, Message and both Buttons
 - Possibility to hide Title, Message and Cancel Button
@@ -49,33 +50,77 @@ If you prefer not to use any of the aforementioned dependency managers, you can 
 
 ## Usage
 
-Create an AlertView:
+### UIKit
+Create an Alert:
 ```swift
+import UIKit
 import CustomAlert
 
-let alert = AlertView()
+var alert = Alert()
 ```
 
 Customise the UI and add the Fade transition:
 ```swift
-alert.delegate = self
-alert.setupContents(accentColor: .systemBlue,
+        alert.setupContents(delegate: self,
+                            accentColor: .systemBlue,
                             backgroundColor: .systemBackground,
                             icon: UIImage(systemName: "hand.wave"),
                             title: "I am a title",
                             message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                             agreeTitle: "Go to Settings",
                             cancelTitle: "Cancel",
-                            position: .bottom,
-                            hostVC: self)
-alert.fadeIn(duration: 0.3)
+                            position: .bottom(animated: true))
+        alert.fadeIn(duration: 0.3)
 ```
 
 Manage Actions:
 ```swift
-extension ViewController: AlertViewDelegate {
+extension ViewController: AlertDelegate {
     func agreeAction() {
-        // Example: Go to Settings
+        // MARK: - Example: Go to Settings
+        guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
+        if UIApplication.shared.canOpenURL(settingsUrl) {
+            UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                print("Settings opened: \(success)")
+            })
+        }
+    }
+    
+    func cancelAction() {
+        alert.removeFromSuperView(duration: 0.3)
+    }
+}
+```
+### SwiftUI
+Create an Alert:
+```swift
+import SwiftUI
+import CustomAlert
+
+var alert = Alert()
+```
+
+Customise the UI and add the Fade transition:
+```swift
+    private func showAlert() {
+        alert.setupContents(delegate: self,
+                            accentColor: .systemBlue,
+                            backgroundColor: .systemBackground,
+                            icon: UIImage(systemName: "hand.wave"),
+                            title: "I am a title",
+                            message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                            agreeTitle: "Go to Settings",
+                            cancelTitle: "Cancel",
+                            position: .bottom(animated: false))
+        alert.fadeIn(duration: 0.3)
+    }
+```
+
+Manage Actions:
+```swift
+extension ContentView: AlertDelegate {
+    func agreeAction() {
+        // MARK: - Example: Go to Settings
         guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
         if UIApplication.shared.canOpenURL(settingsUrl) {
             UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
