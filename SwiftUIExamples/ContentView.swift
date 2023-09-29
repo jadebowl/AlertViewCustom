@@ -9,35 +9,57 @@ import SwiftUI
 import CustomAlert
 
 struct ContentView: View {
-    @State private var showingSheet = false
-
+    
+    var alert = Alert()
+    
     var body: some View {
         Color.blue
             .ignoresSafeArea(.all)
             .overlay(
                 VStack {
                     Button {
-                        withAnimation {
-                            showingSheet.toggle()
-                        }
-                        
+                        self.showAlert()
                     } label: {
                         Text("Show Alert")
-                    }
-                    .font(.system(size: 17, weight: .semibold, design: .default))
-                    .foregroundColor(.black)
+                    }.font(.system(size: 17, weight: .semibold, design: .default))
+                        .foregroundColor(.black)
                 }
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-                    .overlay(showingSheet ? AlertViewRepresentable(accentColor: .systemBlue,
-                                                      backgroundColor: .systemBackground,
-                                                      icon: UIImage(systemName: "hand.wave"),
-                                                      title: "I am a title",
-                                                      message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                                                      agreeTitle: "Go to Settings",
-                                                      cancelTitle: "Cancel",
-                                                      bottomAnimation: true) : nil))
+            )
+    }
+    
+    private func showAlert() {
+        
+        alert.setupContents(delegate: self,
+                            accentColor: .systemBlue,
+                            backgroundColor: .systemBackground,
+                            icon: UIImage(systemName: "hand.wave"),
+                            title: "I am a title",
+                            message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                            agreeTitle: "Go to Settings",
+                            cancelTitle: "Cancel",
+                            position: .bottom(animated: false))
+        alert.fadeIn(duration: 0.3)
     }
 }
+
+extension ContentView: AlertDelegate {
+    
+    func agreeAction() {
+        // MARK: - Example: Go to Settings
+        guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
+        if UIApplication.shared.canOpenURL(settingsUrl) {
+            UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                print("Settings opened: \(success)")
+            })
+        }
+    }
+    
+    func cancelAction() {
+        alert.removeFromSuperView(duration: 0.3)
+    }
+}
+
+
 
 #Preview {
     ContentView()

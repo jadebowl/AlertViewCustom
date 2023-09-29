@@ -29,3 +29,18 @@ internal extension UIColor {
         return UIColor(red: d, green: d, blue: d, alpha: 1)
     }
 }
+
+extension UIWindow {
+    func dismiss() {
+        isHidden = true
+        windowScene = nil
+    }
+}
+
+internal extension UIApplication {
+  var activeWindowScene: UIWindowScene? {
+    return connectedScenes
+      .compactMap { $0 as? UIWindowScene }
+      .first { $0.activationState == .foregroundActive }
+  }
+}

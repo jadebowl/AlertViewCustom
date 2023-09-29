@@ -15,6 +15,8 @@ public class AlertView: UIView {
     @IBOutlet weak var alertCenterConstraint: NSLayoutConstraint!
     @IBOutlet weak var alertTopConstraint: NSLayoutConstraint!
     
+    var delegate: AlertDelegate?
+    
     var alertBottomConstraint: NSLayoutConstraint?
     var alertBottomAnimation = false
         
@@ -26,11 +28,11 @@ public class AlertView: UIView {
     }
     
     @IBAction func agreeAction(_ sender: UIButton) {
-        AlertWindow.shared.delegate?.agreeAction()
+        delegate?.agreeAction()
     }
     
     @IBAction func cancelAction(_ sender: UIButton) {
-        AlertWindow.shared.delegate?.cancelAction()
+        delegate?.cancelAction()
     }
     
     func loadViewFromNib() -> UIView? {

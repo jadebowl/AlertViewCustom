@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		0E2FCC1E2AC74100004AD885 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6AE572AC5E07000C4E0FE /* Enums.swift */; };
 		0E2FCC1F2AC7411B004AD885 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6AE582AC5E07000C4E0FE /* Extensions.swift */; };
-		0E2FCC212AC748B4004AD885 /* AlertViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2FCC202AC748B4004AD885 /* AlertViewRepresentable.swift */; };
-		0E2FCC262AC75355004AD885 /* AlertWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2FCC252AC75355004AD885 /* AlertWindow.swift */; };
 		0EA6AE152AC5DE9900C4E0FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6AE142AC5DE9900C4E0FE /* AppDelegate.swift */; };
 		0EA6AE192AC5DE9900C4E0FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6AE182AC5DE9900C4E0FE /* ViewController.swift */; };
 		0EA6AE1C2AC5DE9900C4E0FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA6AE1A2AC5DE9900C4E0FE /* Main.storyboard */; };
@@ -28,6 +26,7 @@
 		0EA6AE5E2AC5E07900C4E0FE /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6AE5C2AC5E07900C4E0FE /* AlertView.swift */; };
 		0EA6AE612AC5E0F100C4E0FE /* CustomAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA6AE492AC5DF9C00C4E0FE /* CustomAlert.framework */; };
 		0EA6AE622AC5E0F100C4E0FE /* CustomAlert.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA6AE492AC5DF9C00C4E0FE /* CustomAlert.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7A980A6E2AC7661E00072821 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A980A6D2AC7661E00072821 /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,8 +79,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0E2FCC202AC748B4004AD885 /* AlertViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewRepresentable.swift; sourceTree = "<group>"; };
-		0E2FCC252AC75355004AD885 /* AlertWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertWindow.swift; sourceTree = "<group>"; };
 		0EA6AE122AC5DE9900C4E0FE /* UIKitExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA6AE142AC5DE9900C4E0FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EA6AE182AC5DE9900C4E0FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,10 +92,11 @@
 		0EA6AE302AC5DEC100C4E0FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EA6AE332AC5DEC100C4E0FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0EA6AE492AC5DF9C00C4E0FE /* CustomAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CustomAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0EA6AE572AC5E07000C4E0FE /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Enums.swift; path = CustomAlert/Enums.swift; sourceTree = "<group>"; };
-		0EA6AE582AC5E07000C4E0FE /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = CustomAlert/Extensions.swift; sourceTree = "<group>"; };
+		0EA6AE572AC5E07000C4E0FE /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		0EA6AE582AC5E07000C4E0FE /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0EA6AE5B2AC5E07900C4E0FE /* AlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
 		0EA6AE5C2AC5E07900C4E0FE /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		7A980A6D2AC7661E00072821 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,14 +126,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E2FCC282AC753E9004AD885 /* Window */ = {
-			isa = PBXGroup;
-			children = (
-				0E2FCC252AC75355004AD885 /* AlertWindow.swift */,
-			);
-			path = Window;
-			sourceTree = "<group>";
-		};
 		0EA6ADD22AC5DE1300C4E0FE = {
 			isa = PBXGroup;
 			children = (
@@ -192,10 +182,9 @@
 		0EA6AE4A2AC5DF9C00C4E0FE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				0E2FCC282AC753E9004AD885 /* Window */,
+				7A980A6D2AC7661E00072821 /* Alert.swift */,
 				0EA6AE5F2AC5E07D00C4E0FE /* Views */,
-				0EA6AE572AC5E07000C4E0FE /* Enums.swift */,
-				0EA6AE582AC5E07000C4E0FE /* Extensions.swift */,
+				7A980A712AC76BE800072821 /* Utils */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -203,7 +192,6 @@
 		0EA6AE5F2AC5E07D00C4E0FE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0E2FCC202AC748B4004AD885 /* AlertViewRepresentable.swift */,
 				0EA6AE5C2AC5E07900C4E0FE /* AlertView.swift */,
 				0EA6AE5B2AC5E07900C4E0FE /* AlertView.xib */,
 			);
@@ -216,6 +204,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A980A712AC76BE800072821 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0EA6AE572AC5E07000C4E0FE /* Enums.swift */,
+				0EA6AE582AC5E07000C4E0FE /* Extensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,10 +382,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A980A6E2AC7661E00072821 /* Alert.swift in Sources */,
 				0EA6AE592AC5E07000C4E0FE /* Enums.swift in Sources */,
 				0EA6AE5A2AC5E07100C4E0FE /* Extensions.swift in Sources */,
-				0E2FCC212AC748B4004AD885 /* AlertViewRepresentable.swift in Sources */,
-				0E2FCC262AC75355004AD885 /* AlertWindow.swift in Sources */,
 				0EA6AE5E2AC5E07900C4E0FE /* AlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
