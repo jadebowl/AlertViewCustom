@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E2FCC1C2AC740F3004AD885 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EA6AE5B2AC5E07900C4E0FE /* AlertView.xib */; };
+		0E2FCC1D2AC740F7004AD885 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6AE5C2AC5E07900C4E0FE /* AlertView.swift */; };
+		0E2FCC1E2AC74100004AD885 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6AE572AC5E07000C4E0FE /* Enums.swift */; };
+		0E2FCC1F2AC7411B004AD885 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6AE582AC5E07000C4E0FE /* Extensions.swift */; };
 		0EA6AE152AC5DE9900C4E0FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6AE142AC5DE9900C4E0FE /* AppDelegate.swift */; };
 		0EA6AE192AC5DE9900C4E0FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6AE182AC5DE9900C4E0FE /* ViewController.swift */; };
 		0EA6AE1C2AC5DE9900C4E0FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA6AE1A2AC5DE9900C4E0FE /* Main.storyboard */; };
@@ -329,6 +333,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E2FCC1C2AC740F3004AD885 /* AlertView.xib in Resources */,
 				0EA6AE342AC5DEC100C4E0FE /* Preview Assets.xcassets in Resources */,
 				0EA6AE312AC5DEC100C4E0FE /* Assets.xcassets in Resources */,
 			);
@@ -358,8 +363,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E2FCC1F2AC7411B004AD885 /* Extensions.swift in Sources */,
 				0EA6AE2F2AC5DEC000C4E0FE /* ContentView.swift in Sources */,
 				0EA6AE2D2AC5DEC000C4E0FE /* SwiftUIExamplesApp.swift in Sources */,
+				0E2FCC1E2AC74100004AD885 /* Enums.swift in Sources */,
+				0E2FCC1D2AC740F7004AD885 /* AlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
