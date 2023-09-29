@@ -1,42 +1,47 @@
 //
-//  ViewController.swift
-//  CustomAlertExample
+//  ContentView.swift
+//  SwiftUIExamples
 //
-//  Created by Jade Bowl on 07/08/23.
+//  Created by Giada Ciotola on 28/09/23.
 //
 
-import UIKit
+import SwiftUI
 import CustomAlert
 
-class ViewController: UIViewController {
-
-    let alert = AlertView()
+struct ContentView: View {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        alert.delegate = self
+    var alert = Alert()
+    
+    var body: some View {
+        Color.blue
+            .ignoresSafeArea(.all)
+            .overlay(
+                VStack {
+                    Button {
+                        self.showAlert()
+                    } label: {
+                        Text("Show Alert")
+                    }.font(.system(size: 17, weight: .semibold, design: .default))
+                        .foregroundColor(.black)
+                }
+            )
     }
-
-    func setupAlert() {
-        alert.setupContents(accentColor: .systemBlue,
+    
+    private func showAlert() {
+        alert.setupContents(delegate: self,
+                            accentColor: .systemBlue,
                             backgroundColor: .systemBackground,
                             icon: UIImage(systemName: "hand.wave"),
                             title: "I am a title",
                             message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                             agreeTitle: "Go to Settings",
                             cancelTitle: "Cancel",
-                            position: .bottom,
-                            bottomAnimation: true,
-                            hostVC: self)
+                            position: .bottom(animated: false))
         alert.fadeIn(duration: 0.3)
-    }
-
-    @IBAction func showAlert(_ sender: UIButton) {
-        setupAlert()
     }
 }
 
-extension ViewController: AlertViewDelegate {
+extension ContentView: AlertDelegate {
     func agreeAction() {
         // MARK: - Example: Go to Settings
         guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
@@ -50,4 +55,8 @@ extension ViewController: AlertViewDelegate {
     func cancelAction() {
         alert.removeFromSuperView(duration: 0.3)
     }
+}
+
+#Preview {
+    ContentView()
 }

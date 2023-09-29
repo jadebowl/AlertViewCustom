@@ -3,7 +3,7 @@ import UIKit
 internal extension UIViewController {
     static func loadFromNib() -> Self {
         func instantiateFromNib<T: UIViewController>() -> T {
-            return T.init(nibName: String(describing: T.self), bundle: .module)
+            return T.init(nibName: String(describing: T.self), bundle: .main)
         }
         return instantiateFromNib()
     }
@@ -30,11 +30,17 @@ internal extension UIColor {
     }
 }
 
-public extension UIView {
-    func removeFromSuperView(duration: TimeInterval) {
-        UIView.animate(withDuration: duration, animations: {
-            self.alpha = 0.0 }, completion: {( value: Bool ) in
-            self.removeFromSuperview()
-        })
+extension UIWindow {
+    func dismiss() {
+        isHidden = true
+        windowScene = nil
     }
+}
+
+internal extension UIApplication {
+  var activeWindowScene: UIWindowScene? {
+    return connectedScenes
+      .compactMap { $0 as? UIWindowScene }
+      .first { $0.activationState == .foregroundActive }
+  }
 }

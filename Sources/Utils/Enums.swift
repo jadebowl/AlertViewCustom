@@ -2,5 +2,5 @@ import Foundation
 
 public enum AlertPosition {
     case center
-    case bottom
+    case bottom(animated: Bool)
 }
