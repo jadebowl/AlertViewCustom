@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import CustomAlert
 
 struct ContentView: View {
     @State private var showingSheet = false
-    
+
     var body: some View {
         Color.blue
             .ignoresSafeArea(.all)
@@ -27,7 +28,7 @@ struct ContentView: View {
                     .foregroundColor(.black)
                 }
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-                    .overlay(showingSheet ? ViewAlert(accentColor: .systemBlue,
+                    .overlay(showingSheet ? AlertViewRepresentable(accentColor: .systemBlue,
                                                       backgroundColor: .systemBackground,
                                                       icon: UIImage(systemName: "hand.wave"),
                                                       title: "I am a title",
@@ -41,36 +42,3 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
-
-struct ViewAlert: UIViewRepresentable {
-    var accentColor: UIColor
-    var backgroundColor: UIColor
-    var backgroundRadius: CGFloat = 16
-    var icon: UIImage? = nil
-    var title: String? = nil
-    var message: String? = nil
-    var agreeTitle: String
-    var agreeCornerRadius: CGFloat = 16
-    var cancelTitle: String? = nil
-    var bottomAnimation: Bool = false
-    
-    func makeUIView(context: Context) -> UIView {
-        AlertView()
-    }
-    
-    func updateUIView(_ uiView: UIView, context: Context) {
-        let alert = uiView as? AlertView
-        alert?.tintColor = accentColor
-        alert?.backgroundView.backgroundColor = backgroundColor
-        alert?.backgroundView.layer.cornerRadius = backgroundRadius
-        alert?.iconImageView.image = icon
-        alert?.titleLabel.text = title
-        alert?.messageLabel.text = message
-        alert?.agreeButton.setTitle(agreeTitle, for: .normal)
-        alert?.agreeButton.layer.cornerRadius = agreeCornerRadius
-        alert?.cancelButton.setTitle(cancelTitle, for: .normal)
-        alert?.alertBottomAnimation = bottomAnimation
-    }
-}
-
-
