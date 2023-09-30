@@ -30,6 +30,7 @@ internal extension UIColor {
     }
 }
 
+@available(iOS 14.0, *)
 extension UIWindow {
     func dismiss() {
         isHidden = true
@@ -37,6 +38,7 @@ extension UIWindow {
     }
 }
 
+@available(iOS 14.0, *)
 internal extension UIApplication {
   var activeWindowScene: UIWindowScene? {
     return connectedScenes
