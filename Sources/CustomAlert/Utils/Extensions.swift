@@ -1,14 +1,5 @@
 import UIKit
 
-internal extension UIViewController {
-    static func loadFromNib() -> Self {
-        func instantiateFromNib<T: UIViewController>() -> T {
-            return T.init(nibName: String(describing: T.self), bundle: .main)
-        }
-        return instantiateFromNib()
-    }
-}
-
 internal extension UIColor {
     func contrastColor() -> UIColor {
         var d = CGFloat(0)
@@ -30,7 +21,6 @@ internal extension UIColor {
     }
 }
 
-@available(iOS 14.0, *)
 extension UIWindow {
     func dismiss() {
         isHidden = true
@@ -38,7 +28,6 @@ extension UIWindow {
     }
 }
 
-@available(iOS 14.0, *)
 internal extension UIApplication {
   var activeWindowScene: UIWindowScene? {
     return connectedScenes

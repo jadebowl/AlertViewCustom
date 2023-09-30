@@ -5,12 +5,16 @@ import PackageDescription
 
 let package = Package(
     name: "CustomAlert",
+    platforms: [
+        .iOS(.v14),
+        .macOS(.v11)
+    ],
     products: [
         .library(
             name: "CustomAlert",
             targets: ["CustomAlert"]),
     ],
-    dependencies: [ ],
+    dependencies: [],
     targets: [
         .target(
             name: "CustomAlert",
