@@ -19,12 +19,64 @@ public class CustomAlertView: UIView {
         return view
     }()
     
-    var iconImageView = UIImageView()
-    var titleLabel = UILabel()
-    var messageLabel = UILabel()
+    lazy var mainStackView: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .vertical
+        stack.alignment = .center
+        stack.distribution = .fill
+        stack.spacing = 24
+        return stack
+    }()
     
-    var agreeButton = UIButton()
-    var cancelButton = UIButton()
+    lazy var iconImageView: UIImageView = {
+        let image = UIImageView()
+        return image
+    }()
+    
+    lazy var titlesStackView: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .vertical
+        stack.alignment = .fill
+        stack.distribution = .fill
+        stack.spacing = 12
+        return stack
+    }()
+    
+    lazy var titleLabel: UILabel = {
+        let title = UILabel()
+        title.textAlignment = .center
+        title.font = .preferredFont(forTextStyle: .headline)
+        return title
+    }()
+    
+    lazy var messageLabel: UILabel = {
+        let title = UILabel()
+        title.numberOfLines = 0
+        title.textAlignment = .center
+        title.font = .preferredFont(forTextStyle: .subheadline)
+        return title
+    }()
+    
+    lazy var buttonsStackView: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .vertical
+        stack.alignment = .fill
+        stack.distribution = .fill
+        stack.spacing = 4
+        return stack
+    }()
+    
+    lazy var agreeButton: UIButton = {
+        let button = UIButton()
+        button.titleLabel?.font = .systemFont(ofSize: 17, weight: .semibold)
+        return button
+    }()
+    
+    lazy var cancelButton: UIButton = {
+        let button = UIButton()
+        button.titleLabel?.font = .systemFont(ofSize: 17, weight: .regular)
+        return button
+    }()
     
     var alertCenterConstraint: NSLayoutConstraint?
     var alertTopConstraint: NSLayoutConstraint?
@@ -51,14 +103,44 @@ public class CustomAlertView: UIView {
         
         contentView.addSubview(backgroundView)
         backgroundView.translatesAutoresizingMaskIntoConstraints = false
-        backgroundView.topAnchor.constraint(lessThanOrEqualTo: contentView.topAnchor, constant: 300).isActive = true
         backgroundView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 32).isActive = true
         backgroundView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
-        backgroundView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
+        
+        backgroundView.addSubview(mainStackView)
+        mainStackView.translatesAutoresizingMaskIntoConstraints = false
+        mainStackView.topAnchor.constraint(equalTo: backgroundView.topAnchor, constant: 32).isActive = true
+        mainStackView.bottomAnchor.constraint(equalTo: backgroundView.bottomAnchor, constant: 16).isActive = true
+        mainStackView.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor, constant: 0).isActive = true
+        mainStackView.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor, constant: 0).isActive = true
+        
+        mainStackView.insertArrangedSubview(iconImageView, at: 0)
+        iconImageView.translatesAutoresizingMaskIntoConstraints = false
+        iconImageView.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        iconImageView.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        
+        mainStackView.insertArrangedSubview(titlesStackView, at: 1)
+        titlesStackView.insertArrangedSubview(titleLabel, at: 0)
+        titlesStackView.insertArrangedSubview(messageLabel, at: 1)
+        titlesStackView.translatesAutoresizingMaskIntoConstraints = false
+        titlesStackView.leadingAnchor.constraint(equalTo: mainStackView.leadingAnchor, constant: 16).isActive = true
+        
+        mainStackView.insertArrangedSubview(buttonsStackView, at: 2)
+        buttonsStackView.insertArrangedSubview(agreeButton, at: 0)
+        buttonsStackView.insertArrangedSubview(cancelButton, at: 1)
+        buttonsStackView.translatesAutoresizingMaskIntoConstraints = false
+        buttonsStackView.leadingAnchor.constraint(equalTo: mainStackView.leadingAnchor, constant: 16).isActive = true
+        
+        agreeButton.translatesAutoresizingMaskIntoConstraints = false
+        agreeButton.heightAnchor.constraint(equalToConstant: 56).isActive = true
+        cancelButton.translatesAutoresizingMaskIntoConstraints = false
+        cancelButton.heightAnchor.constraint(equalToConstant: 56).isActive = true
+        
+        setupActions()
     }
     
     func setupActions() {
-        
+        agreeButton.addTarget(self, action: #selector(agreeAction), for: .touchUpInside)
+        cancelButton.addTarget(self, action: #selector(cancelAction), for: .touchUpInside)
     }
     
     @objc func agreeAction(_ sender: UIButton) {
