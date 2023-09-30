@@ -12,6 +12,7 @@ public protocol AlertViewDelegate {
     func cancelAction()
 }
 
+@available(iOS 14.0, *)
 public class AlertView {
     public var delegate: AlertViewDelegate? {
         didSet {
