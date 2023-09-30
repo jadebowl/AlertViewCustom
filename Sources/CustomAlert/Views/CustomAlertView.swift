@@ -36,7 +36,7 @@ public class CustomAlertView: UIView {
     }
     
     func loadViewFromNib() -> UIView? {
-        let bundle = Bundle(identifier: "com.jadegoescoding.CustomAlert")
+        let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "CustomAlertView", bundle: bundle)
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
