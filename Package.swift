@@ -18,6 +18,9 @@ let package = Package(
     targets: [
         .target(
             name: "CustomAlert",
-            dependencies: [])
+            dependencies: [],
+            resources: [
+                   .process("Resources") // Assuming your XIB file is in a folder named "Resources"
+               ])
     ]
 )
