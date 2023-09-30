@@ -20,7 +20,7 @@ let package = Package(
             name: "CustomAlert",
             dependencies: [],
             resources: [
-                   .process("Resources") // Assuming your XIB file is in a folder named "Resources"
-               ])
+                .process("Resources/CustomAlertView.xib")
+            ])
     ]
 )
