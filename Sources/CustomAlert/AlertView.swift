@@ -66,13 +66,14 @@ public class AlertView {
             
             alertView.alertBottomConstraint = alertView.backgroundView.bottomAnchor.constraint(equalTo: alertView.contentView.bottomAnchor, constant: -32)
             alertView.alertBottomConstraint?.isActive = true
-            
+            break
         default:
             alertView.backgroundView.translatesAutoresizingMaskIntoConstraints = false
             alertView.alertCenterConstraint?.isActive = true
             alertView.alertTopConstraint?.isActive = true
             
             alertView.alertBottomConstraint?.isActive = false
+            break
         }
         
         hostViewController.view.addSubview(alertView)

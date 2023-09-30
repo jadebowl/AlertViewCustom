@@ -20,7 +20,6 @@
 		0EA6AE502AC5DF9C00C4E0FE /* CustomAlert.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA6AE492AC5DF9C00C4E0FE /* CustomAlert.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0EA6AE592AC5E07000C4E0FE /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6AE572AC5E07000C4E0FE /* Enums.swift */; };
 		0EA6AE5A2AC5E07100C4E0FE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6AE582AC5E07000C4E0FE /* Extensions.swift */; };
-		0EA6AE5D2AC5E07900C4E0FE /* CustomAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EA6AE5B2AC5E07900C4E0FE /* CustomAlertView.xib */; };
 		0EA6AE5E2AC5E07900C4E0FE /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6AE5C2AC5E07900C4E0FE /* CustomAlertView.swift */; };
 		0EA6AE612AC5E0F100C4E0FE /* CustomAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA6AE492AC5DF9C00C4E0FE /* CustomAlert.framework */; };
 		0EA6AE622AC5E0F100C4E0FE /* CustomAlert.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA6AE492AC5DF9C00C4E0FE /* CustomAlert.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -350,7 +349,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EA6AE5D2AC5E07900C4E0FE /* CustomAlertView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

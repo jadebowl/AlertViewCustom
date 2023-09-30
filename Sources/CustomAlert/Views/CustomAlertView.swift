@@ -2,52 +2,80 @@ import UIKit
 
 public class CustomAlertView: UIView {
     
-    @IBOutlet var contentView: UIView!
-    @IBOutlet weak var backgroundView: UIView!
+    lazy var contentView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .clear
+        return view
+    }()
     
-    @IBOutlet weak var iconImageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var messageLabel: UILabel!
+    lazy var blurredView: UIVisualEffectView = {
+        let blurEffect = UIBlurEffect(style: .dark)
+        let blurredEffectView = UIVisualEffectView(effect: blurEffect)
+        return blurredEffectView
+    }()
     
-    @IBOutlet weak var agreeButton: UIButton!
-    @IBOutlet weak var cancelButton: UIButton!
+    lazy var backgroundView: UIView = {
+        let view = UIView()
+        return view
+    }()
     
-    @IBOutlet weak var alertCenterConstraint: NSLayoutConstraint!
-    @IBOutlet weak var alertTopConstraint: NSLayoutConstraint!
+    var iconImageView = UIImageView()
+    var titleLabel = UILabel()
+    var messageLabel = UILabel()
+    
+    var agreeButton = UIButton()
+    var cancelButton = UIButton()
+    
+    var alertCenterConstraint: NSLayoutConstraint?
+    var alertTopConstraint: NSLayoutConstraint?
     
     var delegate: AlertViewDelegate?
     
     var alertBottomConstraint: NSLayoutConstraint?
     var alertBottomAnimation = false
         
-    func setupXib() {
-        contentView = loadViewFromNib()
+    func setupViews() {
         addSubview(contentView)
-        contentView.frame = bounds
-        contentView.backgroundColor = .clear
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
+        contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true
+        contentView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
+        contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
+        
+        contentView.addSubview(blurredView)
+        blurredView.translatesAutoresizingMaskIntoConstraints = false
+        blurredView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0).isActive = true
+        blurredView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0).isActive = true
+        blurredView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0).isActive = true
+        blurredView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0).isActive = true
+        
+        contentView.addSubview(backgroundView)
+        backgroundView.translatesAutoresizingMaskIntoConstraints = false
+        backgroundView.topAnchor.constraint(lessThanOrEqualTo: contentView.topAnchor, constant: 300).isActive = true
+        backgroundView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 32).isActive = true
+        backgroundView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        backgroundView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
     }
     
-    @IBAction func agreeAction(_ sender: UIButton) {
+    func setupActions() {
+        
+    }
+    
+    @objc func agreeAction(_ sender: UIButton) {
         delegate?.agreeAction()
     }
     
-    @IBAction func cancelAction(_ sender: UIButton) {
+    @objc func cancelAction(_ sender: UIButton) {
         delegate?.cancelAction()
     }
     
-    func loadViewFromNib() -> UIView? {
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: "CustomAlertView", bundle: bundle)
-        return nib.instantiate(withOwner: self, options: nil).first as? UIView
-    }
-    
     override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupXib()
+      super.init(frame: frame)
+      setupViews()
     }
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setupXib()
+    required init?(coder aDecoder: NSCoder) {
+      super.init(coder: aDecoder)
+      setupViews()
     }
 }
