@@ -20,7 +20,6 @@
 		0EA6AE502AC5DF9C00C4E0FE /* CustomAlert.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA6AE492AC5DF9C00C4E0FE /* CustomAlert.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0EA6AE592AC5E07000C4E0FE /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6AE572AC5E07000C4E0FE /* Enums.swift */; };
 		0EA6AE5A2AC5E07100C4E0FE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6AE582AC5E07000C4E0FE /* Extensions.swift */; };
-		0EA6AE5D2AC5E07900C4E0FE /* CustomAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EA6AE5B2AC5E07900C4E0FE /* CustomAlertView.xib */; };
 		0EA6AE5E2AC5E07900C4E0FE /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6AE5C2AC5E07900C4E0FE /* CustomAlertView.swift */; };
 		0EA6AE612AC5E0F100C4E0FE /* CustomAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA6AE492AC5DF9C00C4E0FE /* CustomAlert.framework */; };
 		0EA6AE622AC5E0F100C4E0FE /* CustomAlert.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA6AE492AC5DF9C00C4E0FE /* CustomAlert.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -92,8 +91,7 @@
 		0EA6AE492AC5DF9C00C4E0FE /* CustomAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CustomAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA6AE572AC5E07000C4E0FE /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		0EA6AE582AC5E07000C4E0FE /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		0EA6AE5B2AC5E07900C4E0FE /* CustomAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomAlertView.xib; path = Resources/CustomAlertView.xib; sourceTree = "<group>"; };
-		0EA6AE5C2AC5E07900C4E0FE /* CustomAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
+		0EA6AE5C2AC5E07900C4E0FE /* CustomAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomAlertView.swift; path = CustomAlert/CustomAlertView.swift; sourceTree = "<group>"; };
 		7A980A6D2AC7661E00072821 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertView.swift; path = CustomAlert/AlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,20 +179,10 @@
 			isa = PBXGroup;
 			children = (
 				7A980A6D2AC7661E00072821 /* AlertView.swift */,
-				0EA6AE5F2AC5E07D00C4E0FE /* Views */,
+				0EA6AE5C2AC5E07900C4E0FE /* CustomAlertView.swift */,
 				7A980A712AC76BE800072821 /* Utils */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		0EA6AE5F2AC5E07D00C4E0FE /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				0EA6AE5C2AC5E07900C4E0FE /* CustomAlertView.swift */,
-				0EA6AE5B2AC5E07900C4E0FE /* CustomAlertView.xib */,
-			);
-			name = Views;
-			path = CustomAlert/Views;
 			sourceTree = "<group>";
 		};
 		0EA6AE602AC5E0F100C4E0FE /* Frameworks */ = {
@@ -350,7 +338,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EA6AE5D2AC5E07900C4E0FE /* CustomAlertView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
