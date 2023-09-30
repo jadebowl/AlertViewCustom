@@ -91,7 +91,7 @@
 		0EA6AE492AC5DF9C00C4E0FE /* CustomAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CustomAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA6AE572AC5E07000C4E0FE /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		0EA6AE582AC5E07000C4E0FE /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		0EA6AE5C2AC5E07900C4E0FE /* CustomAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
+		0EA6AE5C2AC5E07900C4E0FE /* CustomAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomAlertView.swift; path = CustomAlert/CustomAlertView.swift; sourceTree = "<group>"; };
 		7A980A6D2AC7661E00072821 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertView.swift; path = CustomAlert/AlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -179,19 +179,10 @@
 			isa = PBXGroup;
 			children = (
 				7A980A6D2AC7661E00072821 /* AlertView.swift */,
-				0EA6AE5F2AC5E07D00C4E0FE /* Views */,
+				0EA6AE5C2AC5E07900C4E0FE /* CustomAlertView.swift */,
 				7A980A712AC76BE800072821 /* Utils */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		0EA6AE5F2AC5E07D00C4E0FE /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				0EA6AE5C2AC5E07900C4E0FE /* CustomAlertView.swift */,
-			);
-			name = Views;
-			path = CustomAlert/Views;
 			sourceTree = "<group>";
 		};
 		0EA6AE602AC5E0F100C4E0FE /* Frameworks */ = {

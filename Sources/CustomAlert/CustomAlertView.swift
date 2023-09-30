@@ -78,11 +78,10 @@ public class CustomAlertView: UIView {
         return button
     }()
     
-    var alertCenterConstraint: NSLayoutConstraint?
-    var alertTopConstraint: NSLayoutConstraint?
-    
     var delegate: AlertViewDelegate?
     
+    var alertCenterConstraint: NSLayoutConstraint?
+    var alertTopConstraint: NSLayoutConstraint?
     var alertBottomConstraint: NSLayoutConstraint?
     var alertBottomAnimation = false
         
@@ -109,7 +108,7 @@ public class CustomAlertView: UIView {
         backgroundView.addSubview(mainStackView)
         mainStackView.translatesAutoresizingMaskIntoConstraints = false
         mainStackView.topAnchor.constraint(equalTo: backgroundView.topAnchor, constant: 32).isActive = true
-        mainStackView.bottomAnchor.constraint(equalTo: backgroundView.bottomAnchor, constant: 16).isActive = true
+        mainStackView.bottomAnchor.constraint(equalTo: backgroundView.bottomAnchor, constant: -16).isActive = true
         mainStackView.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor, constant: 0).isActive = true
         mainStackView.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor, constant: 0).isActive = true
         
