@@ -18,9 +18,6 @@ let package = Package(
     targets: [
         .target(
             name: "CustomAlert",
-            dependencies: [],
-            resources: [
-                .process("Resources/CustomAlertView.xib")
-            ])
+            dependencies: [])
     ]
 )
