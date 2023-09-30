@@ -10,7 +10,7 @@ import CustomAlert
 
 struct ContentView: View {
     
-    var alert = Alert()
+    var alert = AlertView()
     
     var body: some View {
         Color.blue
@@ -41,7 +41,7 @@ struct ContentView: View {
     }
 }
 
-extension ContentView: AlertDelegate {
+extension ContentView: AlertViewDelegate {
     func agreeAction() {
         // MARK: - Example: Go to Settings
         guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }

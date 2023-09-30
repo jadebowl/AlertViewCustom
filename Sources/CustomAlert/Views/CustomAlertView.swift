@@ -1,6 +1,6 @@
 import UIKit
 
-public class AlertView: UIView {
+public class CustomAlertView: UIView {
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var backgroundView: UIView!
@@ -15,7 +15,7 @@ public class AlertView: UIView {
     @IBOutlet weak var alertCenterConstraint: NSLayoutConstraint!
     @IBOutlet weak var alertTopConstraint: NSLayoutConstraint!
     
-    var delegate: AlertDelegate?
+    var delegate: AlertViewDelegate?
     
     var alertBottomConstraint: NSLayoutConstraint?
     var alertBottomAnimation = false
@@ -37,7 +37,7 @@ public class AlertView: UIView {
     
     func loadViewFromNib() -> UIView? {
         let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: "AlertView", bundle: bundle)
+        let nib = UINib(nibName: "CustomAlertView", bundle: bundle)
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
     

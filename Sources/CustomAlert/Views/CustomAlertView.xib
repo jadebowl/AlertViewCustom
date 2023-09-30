@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertView" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomAlertView" customModule="CustomAlert" customModuleProvider="target">
             <connections>
                 <outlet property="agreeButton" destination="jLk-J5-99Y" id="hbt-GM-Qfv"/>
                 <outlet property="alertCenterConstraint" destination="zPs-S0-ygG" id="ef3-vm-7hS"/>

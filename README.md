@@ -54,7 +54,7 @@ Create an Alert:
 ```swift
 import CustomAlert
 
-var alert = Alert()
+var alert = AlertView()
 ```
 
 Customise the UI and add the Fade transition:
@@ -73,7 +73,7 @@ Customise the UI and add the Fade transition:
 
 Manage Actions:
 ```swift
-extension Controller: AlertDelegate {
+extension Controller: AlertViewDelegate {
     func agreeAction() {
         // MARK: - Example: Go to Settings
         guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }

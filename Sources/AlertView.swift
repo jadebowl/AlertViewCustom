@@ -7,24 +7,24 @@
 
 import UIKit
 
-public protocol AlertDelegate {
+public protocol AlertViewDelegate {
     func agreeAction()
     func cancelAction()
 }
 
-public class Alert {
-    public var delegate: AlertDelegate? {
+public class AlertView {
+    public var delegate: AlertViewDelegate? {
         didSet {
             alertView.delegate = delegate
         }
     }
     
-    private let alertView: AlertView
+    private let alertView: CustomAlertView
     private let hostViewController: UIViewController
     private let alertWindow: UIWindow
     
     public init() {
-        self.alertView = AlertView()
+        self.alertView = CustomAlertView()
         self.alertWindow = UIWindow()
         self.alertWindow.backgroundColor = .clear
         
@@ -34,7 +34,7 @@ public class Alert {
         self.alertWindow.rootViewController = viewController
     }
     
-    public func setupContents(delegate: AlertDelegate, accentColor: UIColor, backgroundColor: UIColor, backgroundRadius: CGFloat = 16, icon: UIImage? = nil, title: String? = nil, message: String? = nil, agreeTitle: String, agreeCornerRadius: CGFloat = 16, cancelTitle: String? = nil, position: AlertPosition? = .center) {
+    public func setupContents(delegate: AlertViewDelegate, accentColor: UIColor, backgroundColor: UIColor, backgroundRadius: CGFloat = 16, icon: UIImage? = nil, title: String? = nil, message: String? = nil, agreeTitle: String, agreeCornerRadius: CGFloat = 16, cancelTitle: String? = nil, position: AlertPosition? = .center) {
         
         self.delegate = delegate
         

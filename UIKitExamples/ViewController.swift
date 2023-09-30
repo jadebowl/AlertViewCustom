@@ -10,7 +10,7 @@ import CustomAlert
 
 class ViewController: UIViewController {
 
-    var alert = Alert()
+    var alert = AlertView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: AlertDelegate {
+extension ViewController: AlertViewDelegate {
     func agreeAction() {
         // MARK: - Example: Go to Settings
         guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
