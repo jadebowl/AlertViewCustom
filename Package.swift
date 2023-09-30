@@ -14,9 +14,6 @@ let package = Package(
     targets: [
         .target(
             name: "CustomAlert",
-            dependencies: []),
-        .testTarget(
-            name: "CustomAlertTests",
-            dependencies: ["CustomAlert"]),
+            dependencies: [])
     ]
 )
