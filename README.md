@@ -44,6 +44,15 @@ dependencies: [
 
 Alternatively navigate to your Xcode project, select `Swift Packages` and click the `+` icon to search for `CustomAlert`.
 
+### CocoaPods
+
+CustomAlertView is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'AlertViewCustom'
+```
+
 ### Manually
 
 If you prefer not to use any of the aforementioned dependency managers, you can integrate CustomAlert into your project manually. Simply drag the `Sources` Folder into your Xcode project.
