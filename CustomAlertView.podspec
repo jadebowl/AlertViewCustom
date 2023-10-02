@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = 'CustomAlertView'
+  s.name             = 'AlertViewCustom'
   s.version          = '2.0.0'
   s.summary          = 'A custom AlertView'
 
