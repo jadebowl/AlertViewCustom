@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name             = 'AlertViewCustom'
   s.version          = '2.0.0'
-  s.summary          = 'A custom AlertView'
+  s.summary          = 'Create a custom UIAlertView to fit the style of your app'
 
   s.description      = <<-DESC
-  With CustomAlertView you can create a simple custom alert instead of using the default one from Apple, which doesn't always fit in with the style of your app.
+  With CustomAlertView you can create your own customised UIAlertView instead of using the default one from Apple, which doesn't always fit in with the style of your app.
                        DESC
 
   s.homepage         = 'https://github.com/jadebowl/CustomAlertView'
