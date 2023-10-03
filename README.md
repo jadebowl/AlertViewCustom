@@ -1,5 +1,10 @@
 [![SPM compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)]([https://swift.org/package-manager/](https://github.com/apple/swift-package-manager))
-[![Version](https://img.shields.io/cocoapods/v/AlertViewCustom.svg?style=flat)](https://cocoapods.org/pods/AlertViewCustom) [![License](https://img.shields.io/cocoapods/l/AlertViewCustom.svg?style=flat)](https://cocoapods.org/pods/AlertViewCustom)
+[![Version](https://img.shields.io/cocoapods/v/AlertViewCustom.svg?style=flat)](https://cocoapods.org/pods/AlertViewCustom) 
+[![License](https://img.shields.io/cocoapods/l/AlertViewCustom.svg?style=flat)](https://cocoapods.org/pods/AlertViewCustom)
+
+
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fjadebowl%2FAlertViewCustom%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/jadebowl/AlertViewCustom)
+
 
 # AlertViewCustom
 
