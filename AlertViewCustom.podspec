@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'AlertViewCustom'
-  s.version          = '2.0.0'
+  s.version          = '3.0.0'
   s.summary          = 'Create a custom UIAlertView to fit the style of your app'
 
   s.description      = <<-DESC
