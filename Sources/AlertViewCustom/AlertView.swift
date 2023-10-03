@@ -1,6 +1,6 @@
 //
 //  Alert.swift
-//  CustomAlert
+//  AlertViewCustom
 //
 //  Created by Giuseppe Travasoni on 29/09/23.
 //
@@ -19,12 +19,12 @@ public class AlertView {
         }
     }
     
-    private let alertView: CustomAlertView
+    private let alertView: AlertViewCustom
     private let hostViewController: UIViewController
     private let alertWindow: UIWindow
     
     public init() {
-        self.alertView = CustomAlertView()
+        self.alertView = AlertViewCustom()
         self.alertWindow = UIWindow()
         self.alertWindow.backgroundColor = .clear
         

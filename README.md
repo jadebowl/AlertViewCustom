@@ -1,13 +1,10 @@
-<p align="center">
-   <a href="https://github.com/apple/swift-package-manager">
-      <img src="https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg" alt="SPM">
-   </a>
-</p>
+[![SPM compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)]([https://swift.org/package-manager/](https://github.com/apple/swift-package-manager))
+[![Version](https://img.shields.io/cocoapods/v/AlertViewCustom.svg?style=flat)](https://cocoapods.org/pods/AlertViewCustom) [![License](https://img.shields.io/cocoapods/l/AlertViewCustom.svg?style=flat)](https://cocoapods.org/pods/AlertViewCustom)
 
-# CustomAlertView
+# AlertViewCustom
 
 <p align="left">
-With CustomAlertView you can create your own customised UIAlertView instead of using the default one from Apple, which doesn't always fit in with the style of your app.
+With AlertViewCustom you can create your own customised UIAlertView instead of using the default one from Apple, which doesn't always fit in with the style of your app.
 </p>
 
 ## Features
@@ -38,15 +35,15 @@ To integrate using Apple's [Swift Package Manager](https://swift.org/package-man
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/jadebowl/CustomAlertView.git", from: "1.0.0")
+    .package(url: "https://github.com/jadebowl/AlertViewCustom.git", from: "1.0.0")
 ]
 ```
 
-Alternatively navigate to your Xcode project, select `Swift Packages` and click the `+` icon to search for `CustomAlert`.
+Alternatively navigate to your Xcode project, select `Swift Packages` and click the `+` icon to search for `AlertViewCustom`.
 
 ### CocoaPods
 
-CustomAlertView is available through [CocoaPods](http://cocoapods.org). To install
+AlertViewCustom is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
@@ -55,13 +52,13 @@ pod 'AlertViewCustom'
 
 ### Manually
 
-If you prefer not to use any of the aforementioned dependency managers, you can integrate CustomAlert into your project manually. Simply drag the `Sources` Folder into your Xcode project.
+If you prefer not to use any of the aforementioned dependency managers, you can integrate AlertViewCustom into your project manually. Simply drag the `Sources` Folder into your Xcode project.
 
 ## Usage
 
 Create an Alert:
 ```swift
-import CustomAlert
+import AlertViewCustom
 
 var alert = AlertView()
 ```

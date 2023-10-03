@@ -4,13 +4,13 @@ Pod::Spec.new do |s|
   s.summary          = 'Create a custom UIAlertView to fit the style of your app'
 
   s.description      = <<-DESC
-  With CustomAlertView you can create your own customised UIAlertView instead of using the default one from Apple, which doesn't always fit in with the style of your app.
+  With AlertViewCustom you can create your own customised UIAlertView instead of using the default one from Apple, which doesn't always fit in with the style of your app.
                        DESC
 
-  s.homepage         = 'https://github.com/jadebowl/CustomAlertView'
+  s.homepage         = 'https://github.com/jadebowl/AlertViewCustom'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Giada Ciotola' => 'giadaciotola@hotmail.it' }
-  s.source           = { :git => 'https://github.com/jadebowl/CustomAlertView.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/jadebowl/AlertViewCustom.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '14.0'
   s.source_files = 'Sources/**/*'

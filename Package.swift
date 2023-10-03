@@ -4,20 +4,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "CustomAlert",
+    name: "AlertViewCustom",
     platforms: [
         .iOS(.v14),
         .macOS(.v11)
     ],
     products: [
         .library(
-            name: "CustomAlert",
-            targets: ["CustomAlert"]),
+            name: "AlertViewCustom",
+            targets: ["AlertViewCustom"]),
     ],
     dependencies: [],
     targets: [
         .target(
-            name: "CustomAlert",
+            name: "AlertViewCustom",
             dependencies: [])
     ]
 )

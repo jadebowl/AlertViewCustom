@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import CustomAlert
+import AlertViewCustom
 
 class ViewController: UIViewController {
 

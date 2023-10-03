@@ -16,13 +16,13 @@
 		0EA6AE2F2AC5DEC000C4E0FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6AE2E2AC5DEC000C4E0FE /* ContentView.swift */; };
 		0EA6AE312AC5DEC100C4E0FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EA6AE302AC5DEC100C4E0FE /* Assets.xcassets */; };
 		0EA6AE342AC5DEC100C4E0FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EA6AE332AC5DEC100C4E0FE /* Preview Assets.xcassets */; };
-		0EA6AE4F2AC5DF9C00C4E0FE /* CustomAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA6AE492AC5DF9C00C4E0FE /* CustomAlert.framework */; };
-		0EA6AE502AC5DF9C00C4E0FE /* CustomAlert.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA6AE492AC5DF9C00C4E0FE /* CustomAlert.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0EA6AE4F2AC5DF9C00C4E0FE /* AlertViewCustom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA6AE492AC5DF9C00C4E0FE /* AlertViewCustom.framework */; };
+		0EA6AE502AC5DF9C00C4E0FE /* AlertViewCustom.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA6AE492AC5DF9C00C4E0FE /* AlertViewCustom.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0EA6AE592AC5E07000C4E0FE /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6AE572AC5E07000C4E0FE /* Enums.swift */; };
 		0EA6AE5A2AC5E07100C4E0FE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6AE582AC5E07000C4E0FE /* Extensions.swift */; };
-		0EA6AE5E2AC5E07900C4E0FE /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6AE5C2AC5E07900C4E0FE /* CustomAlertView.swift */; };
-		0EA6AE612AC5E0F100C4E0FE /* CustomAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA6AE492AC5DF9C00C4E0FE /* CustomAlert.framework */; };
-		0EA6AE622AC5E0F100C4E0FE /* CustomAlert.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA6AE492AC5DF9C00C4E0FE /* CustomAlert.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0EA6AE5E2AC5E07900C4E0FE /* AlertViewCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6AE5C2AC5E07900C4E0FE /* AlertViewCustom.swift */; };
+		0EA6AE612AC5E0F100C4E0FE /* AlertViewCustom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA6AE492AC5DF9C00C4E0FE /* AlertViewCustom.framework */; };
+		0EA6AE622AC5E0F100C4E0FE /* AlertViewCustom.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA6AE492AC5DF9C00C4E0FE /* AlertViewCustom.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7A980A6E2AC7661E00072821 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A980A6D2AC7661E00072821 /* AlertView.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +57,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0EA6AE502AC5DF9C00C4E0FE /* CustomAlert.framework in Embed Frameworks */,
+				0EA6AE502AC5DF9C00C4E0FE /* AlertViewCustom.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,7 +68,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0EA6AE622AC5E0F100C4E0FE /* CustomAlert.framework in Embed Frameworks */,
+				0EA6AE622AC5E0F100C4E0FE /* AlertViewCustom.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,11 +88,11 @@
 		0EA6AE2E2AC5DEC000C4E0FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0EA6AE302AC5DEC100C4E0FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EA6AE332AC5DEC100C4E0FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0EA6AE492AC5DF9C00C4E0FE /* CustomAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CustomAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EA6AE492AC5DF9C00C4E0FE /* AlertViewCustom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlertViewCustom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA6AE572AC5E07000C4E0FE /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		0EA6AE582AC5E07000C4E0FE /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		0EA6AE5C2AC5E07900C4E0FE /* CustomAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomAlertView.swift; path = CustomAlert/CustomAlertView.swift; sourceTree = "<group>"; };
-		7A980A6D2AC7661E00072821 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertView.swift; path = CustomAlert/AlertView.swift; sourceTree = "<group>"; };
+		0EA6AE5C2AC5E07900C4E0FE /* AlertViewCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertViewCustom.swift; path = AlertViewCustom/AlertViewCustom.swift; sourceTree = "<group>"; };
+		7A980A6D2AC7661E00072821 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertView.swift; path = AlertViewCustom/AlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EA6AE4F2AC5DF9C00C4E0FE /* CustomAlert.framework in Frameworks */,
+				0EA6AE4F2AC5DF9C00C4E0FE /* AlertViewCustom.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EA6AE612AC5E0F100C4E0FE /* CustomAlert.framework in Frameworks */,
+				0EA6AE612AC5E0F100C4E0FE /* AlertViewCustom.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +138,7 @@
 			children = (
 				0EA6AE122AC5DE9900C4E0FE /* UIKitExamples.app */,
 				0EA6AE2A2AC5DEC000C4E0FE /* SwiftUIExamples.app */,
-				0EA6AE492AC5DF9C00C4E0FE /* CustomAlert.framework */,
+				0EA6AE492AC5DF9C00C4E0FE /* AlertViewCustom.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,7 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				7A980A6D2AC7661E00072821 /* AlertView.swift */,
-				0EA6AE5C2AC5E07900C4E0FE /* CustomAlertView.swift */,
+				0EA6AE5C2AC5E07900C4E0FE /* AlertViewCustom.swift */,
 				7A980A712AC76BE800072821 /* Utils */,
 			);
 			path = Sources;
@@ -199,7 +199,7 @@
 				0EA6AE582AC5E07000C4E0FE /* Extensions.swift */,
 			);
 			name = Utils;
-			path = CustomAlert/Utils;
+			path = AlertViewCustom/Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +254,9 @@
 			productReference = 0EA6AE2A2AC5DEC000C4E0FE /* SwiftUIExamples.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0EA6AE482AC5DF9C00C4E0FE /* CustomAlert */ = {
+		0EA6AE482AC5DF9C00C4E0FE /* AlertViewCustom */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0EA6AE512AC5DF9C00C4E0FE /* Build configuration list for PBXNativeTarget "CustomAlert" */;
+			buildConfigurationList = 0EA6AE512AC5DF9C00C4E0FE /* Build configuration list for PBXNativeTarget "AlertViewCustom" */;
 			buildPhases = (
 				0EA6AE442AC5DF9C00C4E0FE /* Headers */,
 				0EA6AE452AC5DF9C00C4E0FE /* Sources */,
@@ -267,9 +267,9 @@
 			);
 			dependencies = (
 			);
-			name = CustomAlert;
+			name = AlertViewCustom;
 			productName = CustomAlertView;
-			productReference = 0EA6AE492AC5DF9C00C4E0FE /* CustomAlert.framework */;
+			productReference = 0EA6AE492AC5DF9C00C4E0FE /* AlertViewCustom.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -294,7 +294,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0EA6ADD62AC5DE1300C4E0FE /* Build configuration list for PBXProject "CustomAlert" */;
+			buildConfigurationList = 0EA6ADD62AC5DE1300C4E0FE /* Build configuration list for PBXProject "AlertViewCustom" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -307,7 +307,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0EA6AE482AC5DF9C00C4E0FE /* CustomAlert */,
+				0EA6AE482AC5DF9C00C4E0FE /* AlertViewCustom */,
 				0EA6AE112AC5DE9900C4E0FE /* UIKitExamples */,
 				0EA6AE292AC5DEC000C4E0FE /* SwiftUIExamples */,
 			);
@@ -369,7 +369,7 @@
 				7A980A6E2AC7661E00072821 /* AlertView.swift in Sources */,
 				0EA6AE592AC5E07000C4E0FE /* Enums.swift in Sources */,
 				0EA6AE5A2AC5E07100C4E0FE /* Extensions.swift in Sources */,
-				0EA6AE5E2AC5E07900C4E0FE /* CustomAlertView.swift in Sources */,
+				0EA6AE5E2AC5E07900C4E0FE /* AlertViewCustom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,17 +378,17 @@
 /* Begin PBXTargetDependency section */
 		0EA6AE4E2AC5DF9C00C4E0FE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0EA6AE482AC5DF9C00C4E0FE /* CustomAlert */;
+			target = 0EA6AE482AC5DF9C00C4E0FE /* AlertViewCustom */;
 			targetProxy = 0EA6AE4D2AC5DF9C00C4E0FE /* PBXContainerItemProxy */;
 		};
 		0EA6AE562AC5DFCB00C4E0FE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0EA6AE482AC5DF9C00C4E0FE /* CustomAlert */;
+			target = 0EA6AE482AC5DF9C00C4E0FE /* AlertViewCustom */;
 			targetProxy = 0EA6AE552AC5DFCB00C4E0FE /* PBXContainerItemProxy */;
 		};
 		0EA6AE642AC5E0F100C4E0FE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0EA6AE482AC5DF9C00C4E0FE /* CustomAlert */;
+			target = 0EA6AE482AC5DF9C00C4E0FE /* AlertViewCustom */;
 			targetProxy = 0EA6AE632AC5E0F100C4E0FE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -556,7 +556,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jadegoescoding.CustomAlertView.UIKitExamples;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jadegoescoding.AlertViewCustom.UIKitExamples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -586,7 +586,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jadegoescoding.CustomAlertView.UIKitExamples;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jadegoescoding.AlertViewCustom.UIKitExamples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -616,7 +616,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jadegoescoding.CustomAlertView.SwiftUIExamples;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jadegoescoding.AlertViewCustom.SwiftUIExamples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -646,7 +646,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jadegoescoding.CustomAlertView.SwiftUIExamples;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jadegoescoding.AlertViewCustom.SwiftUIExamples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -678,7 +678,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jadegoescoding.CustomAlert;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jadegoescoding.AlertViewCustom;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -714,7 +714,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jadegoescoding.CustomAlert;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jadegoescoding.AlertViewCustom;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -728,7 +728,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0EA6ADD62AC5DE1300C4E0FE /* Build configuration list for PBXProject "CustomAlert" */ = {
+		0EA6ADD62AC5DE1300C4E0FE /* Build configuration list for PBXProject "AlertViewCustom" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0EA6ADED2AC5DE1400C4E0FE /* Debug */,
@@ -755,7 +755,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0EA6AE512AC5DF9C00C4E0FE /* Build configuration list for PBXNativeTarget "CustomAlert" */ = {
+		0EA6AE512AC5DF9C00C4E0FE /* Build configuration list for PBXNativeTarget "AlertViewCustom" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0EA6AE522AC5DF9C00C4E0FE /* Debug */,

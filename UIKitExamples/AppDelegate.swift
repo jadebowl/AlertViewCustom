@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import CustomAlert
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import CustomAlert
+import AlertViewCustom
 
 struct ContentView: View {
     
