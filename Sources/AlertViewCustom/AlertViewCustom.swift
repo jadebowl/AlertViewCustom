@@ -118,9 +118,9 @@ public class AlertViewCustom: UIView {
         iconImageView.widthAnchor.constraint(equalToConstant: 40).isActive = true
         
         mainStackView.insertArrangedSubview(titlesStackView, at: 1)
+        titlesStackView.translatesAutoresizingMaskIntoConstraints = false
         titlesStackView.insertArrangedSubview(titleLabel, at: 0)
         titlesStackView.insertArrangedSubview(messageLabel, at: 1)
-        titlesStackView.translatesAutoresizingMaskIntoConstraints = false
         titlesStackView.leadingAnchor.constraint(equalTo: mainStackView.leadingAnchor, constant: 16).isActive = true
         
         mainStackView.insertArrangedSubview(buttonsStackView, at: 2)

@@ -71,7 +71,7 @@ public class AlertView {
             alertView.backgroundView.translatesAutoresizingMaskIntoConstraints = false
             alertView.alertBottomConstraint?.isActive = false
             
-            alertView.alertTopConstraint = alertView.backgroundView.topAnchor.constraint(equalTo: alertView.contentView.topAnchor, constant: 300)
+            alertView.alertTopConstraint = alertView.backgroundView.topAnchor.constraint(lessThanOrEqualTo: alertView.contentView.topAnchor, constant: 300)
             alertView.alertCenterConstraint = alertView.backgroundView.centerYAnchor.constraint(equalTo: alertView.contentView.centerYAnchor)
             alertView.alertCenterConstraint?.isActive = true
             alertView.alertTopConstraint?.isActive = true

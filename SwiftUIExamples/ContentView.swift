@@ -35,8 +35,7 @@ struct ContentView: View {
                             title: "I am a title",
                             message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                             agreeTitle: "Go to Settings",
-                            cancelTitle: "Cancel",
-                            position: .bottom(animated: false))
+                            cancelTitle: "Cancel")
         alert.fadeIn(duration: 0.3)
     }
 }
