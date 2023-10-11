@@ -1,10 +1,3 @@
-//
-//  Alert.swift
-//  AlertViewCustom
-//
-//  Created by Giuseppe Travasoni on 29/09/23.
-//
-
 import UIKit
 
 public protocol AlertViewDelegate {
@@ -40,21 +33,32 @@ public class AlertView {
         
         alertView.backgroundView.backgroundColor = backgroundColor
         alertView.backgroundView.layer.cornerRadius = backgroundRadius
+        
         alertView.iconImageView.image = icon
         alertView.iconImageView.tintColor = accentColor
         alertView.iconImageView.isHidden = alertView.iconImageView.image == nil
+        
         alertView.titleLabel.text = title
         alertView.titleLabel.isHidden = alertView.titleLabel.text == nil
+        
         alertView.messageLabel.text = message
         alertView.messageLabel.isHidden = alertView.messageLabel.text == nil
+        
         alertView.agreeButton.setTitle(agreeTitle, for: .normal)
         alertView.agreeButton.setTitleColor(accentColor.contrastColor(), for: .normal)
         alertView.agreeButton.backgroundColor = accentColor
         alertView.agreeButton.layer.cornerRadius = agreeCornerRadius
+        
         alertView.cancelButton.setTitle(cancelTitle, for: .normal)
         alertView.cancelButton.setTitleColor(accentColor, for: .normal)
         alertView.cancelButton.isHidden = cancelTitle == nil
         
+        guard let position else { return }
+        setupPosition(position: position)
+        setupHostVCConstraints()
+    }
+    
+    func setupPosition(position: AlertPosition) {
         switch position {
         case .bottom(let animation):
             
@@ -77,7 +81,9 @@ public class AlertView {
             alertView.alertTopConstraint?.isActive = true
             break
         }
-        
+    }
+    
+    func setupHostVCConstraints() {
         hostViewController.view.addSubview(alertView)
         alertView.translatesAutoresizingMaskIntoConstraints = false
         alertView.topAnchor.constraint(equalTo: hostViewController.view.topAnchor, constant: 0).isActive = true

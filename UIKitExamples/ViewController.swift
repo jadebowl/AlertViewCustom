@@ -9,13 +9,13 @@ import UIKit
 import AlertViewCustom
 
 class ViewController: UIViewController {
-
+    
     var alert = AlertView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     func setupAlert() {
         alert.setupContents(delegate: self,
                             accentColor: .systemBlue,
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
                             position: .bottom(animated: true))
         alert.fadeIn(duration: 0.3)
     }
-
+    
     @IBAction func showAlert(_ sender: UIButton) {
         setupAlert()
     }

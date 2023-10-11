@@ -84,45 +84,68 @@ public class AlertViewCustom: UIView {
     var alertTopConstraint: NSLayoutConstraint?
     var alertBottomConstraint: NSLayoutConstraint?
     var alertBottomAnimation = false
-        
+    
     func setupViews() {
+        setupContentView()
+        setupBlurredView()
+        setupBackgroundView()
+        setupMainStack()
+        setupIcon()
+        setupTitles()
+        setupButtons()
+        setupActions()
+    }
+    
+    func setupContentView() {
         addSubview(contentView)
         contentView.translatesAutoresizingMaskIntoConstraints = false
         contentView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
         contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true
         contentView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
         contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
-        
+    }
+    
+    func setupBlurredView() {
         contentView.addSubview(blurredView)
         blurredView.translatesAutoresizingMaskIntoConstraints = false
         blurredView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0).isActive = true
         blurredView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0).isActive = true
         blurredView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0).isActive = true
         blurredView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0).isActive = true
-        
+    }
+    
+    func setupBackgroundView() {
         contentView.addSubview(backgroundView)
         backgroundView.translatesAutoresizingMaskIntoConstraints = false
         backgroundView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 32).isActive = true
         backgroundView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
-        
+    }
+    
+    func setupMainStack() {
         backgroundView.addSubview(mainStackView)
         mainStackView.translatesAutoresizingMaskIntoConstraints = false
         mainStackView.topAnchor.constraint(equalTo: backgroundView.topAnchor, constant: 32).isActive = true
         mainStackView.bottomAnchor.constraint(equalTo: backgroundView.bottomAnchor, constant: -16).isActive = true
         mainStackView.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor, constant: 0).isActive = true
         mainStackView.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor, constant: 0).isActive = true
-        
+    }
+    
+    func setupIcon() {
         mainStackView.insertArrangedSubview(iconImageView, at: 0)
         iconImageView.translatesAutoresizingMaskIntoConstraints = false
         iconImageView.heightAnchor.constraint(equalToConstant: 40).isActive = true
         iconImageView.widthAnchor.constraint(equalToConstant: 40).isActive = true
-        
+    }
+    
+    func setupTitles() {
         mainStackView.insertArrangedSubview(titlesStackView, at: 1)
         titlesStackView.translatesAutoresizingMaskIntoConstraints = false
         titlesStackView.insertArrangedSubview(titleLabel, at: 0)
         titlesStackView.insertArrangedSubview(messageLabel, at: 1)
         titlesStackView.leadingAnchor.constraint(equalTo: mainStackView.leadingAnchor, constant: 16).isActive = true
-        
+    }
+    
+    func setupButtons() {
         mainStackView.insertArrangedSubview(buttonsStackView, at: 2)
         buttonsStackView.insertArrangedSubview(agreeButton, at: 0)
         buttonsStackView.insertArrangedSubview(cancelButton, at: 1)
@@ -133,8 +156,6 @@ public class AlertViewCustom: UIView {
         agreeButton.heightAnchor.constraint(equalToConstant: 56).isActive = true
         cancelButton.translatesAutoresizingMaskIntoConstraints = false
         cancelButton.heightAnchor.constraint(equalToConstant: 56).isActive = true
-        
-        setupActions()
     }
     
     func setupActions() {
@@ -151,12 +172,12 @@ public class AlertViewCustom: UIView {
     }
     
     override init(frame: CGRect) {
-      super.init(frame: frame)
-      setupViews()
+        super.init(frame: frame)
+        setupViews()
     }
     
     required init?(coder aDecoder: NSCoder) {
-      super.init(coder: aDecoder)
-      setupViews()
+        super.init(coder: aDecoder)
+        setupViews()
     }
 }

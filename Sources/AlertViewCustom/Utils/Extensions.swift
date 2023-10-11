@@ -29,9 +29,9 @@ extension UIWindow {
 }
 
 internal extension UIApplication {
-  var activeWindowScene: UIWindowScene? {
-    return connectedScenes
-      .compactMap { $0 as? UIWindowScene }
-      .first { $0.activationState == .foregroundActive }
-  }
+    var activeWindowScene: UIWindowScene? {
+        return connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .first { $0.activationState == .foregroundActive }
+    }
 }

@@ -90,3 +90,4 @@ fastlane/test_output
 iOSInjectionProject/
 /Sources/CustomAlert/.DS_Store
 /.DS_Store
+.DS_Store
