@@ -95,7 +95,7 @@ public class AlertViewCustom: UIView {
         setupActions()
     }
     
-    func setupContentView() {
+    private func setupContentView() {
         addSubview(contentView)
         contentView.translatesAutoresizingMaskIntoConstraints = false
         contentView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
@@ -104,7 +104,7 @@ public class AlertViewCustom: UIView {
         contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
     }
     
-    func setupBlurredView() {
+    private func setupBlurredView() {
         contentView.addSubview(blurredView)
         blurredView.translatesAutoresizingMaskIntoConstraints = false
         blurredView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0).isActive = true
@@ -113,14 +113,14 @@ public class AlertViewCustom: UIView {
         blurredView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0).isActive = true
     }
     
-    func setupBackgroundView() {
+    private func setupBackgroundView() {
         contentView.addSubview(backgroundView)
         backgroundView.translatesAutoresizingMaskIntoConstraints = false
         backgroundView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 32).isActive = true
         backgroundView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
     }
     
-    func setupMainStack() {
+    private func setupMainStack() {
         backgroundView.addSubview(mainStackView)
         mainStackView.translatesAutoresizingMaskIntoConstraints = false
         mainStackView.topAnchor.constraint(equalTo: backgroundView.topAnchor, constant: 32).isActive = true
@@ -129,14 +129,14 @@ public class AlertViewCustom: UIView {
         mainStackView.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor, constant: 0).isActive = true
     }
     
-    func setupIcon() {
+    private func setupIcon() {
         mainStackView.insertArrangedSubview(iconImageView, at: 0)
         iconImageView.translatesAutoresizingMaskIntoConstraints = false
         iconImageView.heightAnchor.constraint(equalToConstant: 40).isActive = true
         iconImageView.widthAnchor.constraint(equalToConstant: 40).isActive = true
     }
     
-    func setupTitles() {
+    private func setupTitles() {
         mainStackView.insertArrangedSubview(titlesStackView, at: 1)
         titlesStackView.translatesAutoresizingMaskIntoConstraints = false
         titlesStackView.insertArrangedSubview(titleLabel, at: 0)
@@ -144,29 +144,28 @@ public class AlertViewCustom: UIView {
         titlesStackView.leadingAnchor.constraint(equalTo: mainStackView.leadingAnchor, constant: 16).isActive = true
     }
     
-    func setupButtons() {
+    private func setupButtons() {
         mainStackView.insertArrangedSubview(buttonsStackView, at: 2)
         buttonsStackView.insertArrangedSubview(agreeButton, at: 0)
         buttonsStackView.insertArrangedSubview(cancelButton, at: 1)
         buttonsStackView.translatesAutoresizingMaskIntoConstraints = false
         buttonsStackView.leadingAnchor.constraint(equalTo: mainStackView.leadingAnchor, constant: 16).isActive = true
-        
         agreeButton.translatesAutoresizingMaskIntoConstraints = false
         agreeButton.heightAnchor.constraint(equalToConstant: 56).isActive = true
         cancelButton.translatesAutoresizingMaskIntoConstraints = false
         cancelButton.heightAnchor.constraint(equalToConstant: 56).isActive = true
     }
     
-    func setupActions() {
+    private func setupActions() {
         agreeButton.addTarget(self, action: #selector(agreeAction), for: .touchUpInside)
         cancelButton.addTarget(self, action: #selector(cancelAction), for: .touchUpInside)
     }
     
-    @objc func agreeAction(_ sender: UIButton) {
+    @objc private func agreeAction(_ sender: UIButton) {
         delegate?.agreeAction()
     }
     
-    @objc func cancelAction(_ sender: UIButton) {
+    @objc private func cancelAction(_ sender: UIButton) {
         delegate?.cancelAction()
     }
     

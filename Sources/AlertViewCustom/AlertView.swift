@@ -33,7 +33,8 @@ public class AlertView {
         setupBackground(backgroundColor: backgroundColor, backgroundRadius: backgroundRadius)
         setupIcon(icon: icon, accentColor: accentColor)
         setupTitles(title: title, message: message)
-        setupButtons(accentColor: accentColor, agreeTitle: agreeTitle, agreeCornerRadius: agreeCornerRadius, cancelTitle: cancelTitle)
+        setupAgreeButton(accentColor: accentColor, agreeTitle: agreeTitle, agreeCornerRadius: agreeCornerRadius)
+        setupCancelButton(accentColor: accentColor, cancelTitle: cancelTitle)
         
         guard let position else { return }
         setupPosition(position: position)
@@ -58,12 +59,14 @@ public class AlertView {
         alertView.messageLabel.isHidden = alertView.messageLabel.text == nil
     }
     
-    func setupButtons(accentColor: UIColor, agreeTitle: String, agreeCornerRadius: CGFloat, cancelTitle: String?) {
+    func setupAgreeButton(accentColor: UIColor, agreeTitle: String, agreeCornerRadius: CGFloat) {
         alertView.agreeButton.setTitle(agreeTitle, for: .normal)
         alertView.agreeButton.setTitleColor(accentColor.contrastColor(), for: .normal)
         alertView.agreeButton.backgroundColor = accentColor
         alertView.agreeButton.layer.cornerRadius = agreeCornerRadius
-        
+    }
+    
+    func setupCancelButton(accentColor: UIColor, cancelTitle: String?) {
         alertView.cancelButton.setTitle(cancelTitle, for: .normal)
         alertView.cancelButton.setTitleColor(accentColor, for: .normal)
         alertView.cancelButton.isHidden = cancelTitle == nil
@@ -103,9 +106,7 @@ public class AlertView {
             alertWindow.windowScene = activeScene
             alertWindow.frame = activeScene.coordinateSpace.bounds
         }
-        
         alertWindow.isHidden = false
-        
         alertView.isHidden = false
         if alertView.alertBottomAnimation {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
