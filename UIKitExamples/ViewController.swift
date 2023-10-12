@@ -49,5 +49,3 @@ extension ViewController: AlertViewDelegate {
         alert.removeFromSuperView(duration: 0.3)
     }
 }
-
-

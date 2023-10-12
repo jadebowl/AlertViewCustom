@@ -11,7 +11,6 @@ public class AlertView {
             alertView.delegate = delegate
         }
     }
-    
     private let alertView: AlertViewCustom
     private let hostViewController: UIViewController
     private let alertWindow: UIWindow
@@ -31,19 +30,35 @@ public class AlertView {
         
         self.delegate = delegate
         
+        setupBackground(backgroundColor: backgroundColor, backgroundRadius: backgroundRadius)
+        setupIcon(icon: icon, accentColor: accentColor)
+        setupTitles(title: title, message: message)
+        setupButtons(accentColor: accentColor, agreeTitle: agreeTitle, agreeCornerRadius: agreeCornerRadius, cancelTitle: cancelTitle)
+        
+        guard let position else { return }
+        setupPosition(position: position)
+        setupHostVCConstraints()
+    }
+    
+    func setupBackground(backgroundColor: UIColor, backgroundRadius: CGFloat) {
         alertView.backgroundView.backgroundColor = backgroundColor
         alertView.backgroundView.layer.cornerRadius = backgroundRadius
-        
+    }
+    
+    func setupIcon(icon: UIImage?, accentColor: UIColor) {
         alertView.iconImageView.image = icon
         alertView.iconImageView.tintColor = accentColor
         alertView.iconImageView.isHidden = alertView.iconImageView.image == nil
-        
+    }
+    
+    func setupTitles(title: String?, message: String?) {
         alertView.titleLabel.text = title
         alertView.titleLabel.isHidden = alertView.titleLabel.text == nil
-        
         alertView.messageLabel.text = message
         alertView.messageLabel.isHidden = alertView.messageLabel.text == nil
-        
+    }
+    
+    func setupButtons(accentColor: UIColor, agreeTitle: String, agreeCornerRadius: CGFloat, cancelTitle: String?) {
         alertView.agreeButton.setTitle(agreeTitle, for: .normal)
         alertView.agreeButton.setTitleColor(accentColor.contrastColor(), for: .normal)
         alertView.agreeButton.backgroundColor = accentColor
@@ -52,34 +67,24 @@ public class AlertView {
         alertView.cancelButton.setTitle(cancelTitle, for: .normal)
         alertView.cancelButton.setTitleColor(accentColor, for: .normal)
         alertView.cancelButton.isHidden = cancelTitle == nil
-        
-        guard let position else { return }
-        setupPosition(position: position)
-        setupHostVCConstraints()
     }
     
     func setupPosition(position: AlertPosition) {
         switch position {
         case .bottom(let animation):
-            
             alertView.alertBottomAnimation = animation
-            
             alertView.backgroundView.translatesAutoresizingMaskIntoConstraints = false
             alertView.alertCenterConstraint?.isActive = false
             alertView.alertTopConstraint?.isActive = false
-            
             alertView.alertBottomConstraint = alertView.backgroundView.bottomAnchor.constraint(equalTo: alertView.contentView.bottomAnchor, constant: -32)
             alertView.alertBottomConstraint?.isActive = true
-            break
         default:
             alertView.backgroundView.translatesAutoresizingMaskIntoConstraints = false
             alertView.alertBottomConstraint?.isActive = false
-            
             alertView.alertTopConstraint = alertView.backgroundView.topAnchor.constraint(lessThanOrEqualTo: alertView.contentView.topAnchor, constant: 300)
             alertView.alertCenterConstraint = alertView.backgroundView.centerYAnchor.constraint(equalTo: alertView.contentView.centerYAnchor)
             alertView.alertCenterConstraint?.isActive = true
             alertView.alertTopConstraint?.isActive = true
-            break
         }
     }
     

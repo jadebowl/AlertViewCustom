@@ -9,7 +9,6 @@ import SwiftUI
 import AlertViewCustom
 
 struct ContentView: View {
-    
     var alert = AlertView()
     
     var body: some View {
@@ -22,7 +21,7 @@ struct ContentView: View {
                     } label: {
                         Text("Show Alert")
                     }.font(.system(size: 17, weight: .semibold, design: .default))
-                        .foregroundColor(.black)
+                        .foregroundColor(.white)
                 }
             )
     }

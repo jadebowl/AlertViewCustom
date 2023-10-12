@@ -1,7 +1,6 @@
 import UIKit
 
 public class AlertViewCustom: UIView {
-    
     lazy var contentView: UIView = {
         let view = UIView()
         view.backgroundColor = .clear
