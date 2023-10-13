@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E39202A2AD979C100EB5B78 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3920292AD979C100EB5B78 /* Structs.swift */; };
+		0E3920322AD9820E00EB5B78 /* AveriaSerifLibre-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E39202C2AD9820E00EB5B78 /* AveriaSerifLibre-Bold.ttf */; };
+		0E3920332AD9820E00EB5B78 /* AveriaSerifLibre-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E39202C2AD9820E00EB5B78 /* AveriaSerifLibre-Bold.ttf */; };
+		0E3920342AD9820E00EB5B78 /* AveriaSerifLibre-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E39202D2AD9820E00EB5B78 /* AveriaSerifLibre-Italic.ttf */; };
+		0E3920352AD9820E00EB5B78 /* AveriaSerifLibre-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E39202D2AD9820E00EB5B78 /* AveriaSerifLibre-Italic.ttf */; };
+		0E39203C2AD9820E00EB5B78 /* AveriaSerifLibre-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E3920312AD9820E00EB5B78 /* AveriaSerifLibre-Regular.ttf */; };
+		0E39203D2AD9820E00EB5B78 /* AveriaSerifLibre-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E3920312AD9820E00EB5B78 /* AveriaSerifLibre-Regular.ttf */; };
 		0EA6AE152AC5DE9900C4E0FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6AE142AC5DE9900C4E0FE /* AppDelegate.swift */; };
 		0EA6AE192AC5DE9900C4E0FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6AE182AC5DE9900C4E0FE /* ViewController.swift */; };
 		0EA6AE1C2AC5DE9900C4E0FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA6AE1A2AC5DE9900C4E0FE /* Main.storyboard */; };
@@ -76,6 +83,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E3920292AD979C100EB5B78 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
+		0E39202C2AD9820E00EB5B78 /* AveriaSerifLibre-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AveriaSerifLibre-Bold.ttf"; sourceTree = "<group>"; };
+		0E39202D2AD9820E00EB5B78 /* AveriaSerifLibre-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AveriaSerifLibre-Italic.ttf"; sourceTree = "<group>"; };
+		0E3920312AD9820E00EB5B78 /* AveriaSerifLibre-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AveriaSerifLibre-Regular.ttf"; sourceTree = "<group>"; };
 		0EA6AE122AC5DE9900C4E0FE /* UIKitExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA6AE142AC5DE9900C4E0FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EA6AE182AC5DE9900C4E0FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -122,10 +133,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E39202B2AD981E600EB5B78 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0E3920312AD9820E00EB5B78 /* AveriaSerifLibre-Regular.ttf */,
+				0E39202C2AD9820E00EB5B78 /* AveriaSerifLibre-Bold.ttf */,
+				0E39202D2AD9820E00EB5B78 /* AveriaSerifLibre-Italic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		0EA6ADD22AC5DE1300C4E0FE = {
 			isa = PBXGroup;
 			children = (
 				0EA6AE4A2AC5DF9C00C4E0FE /* Sources */,
+				0E39202B2AD981E600EB5B78 /* Fonts */,
 				0EA6AE132AC5DE9900C4E0FE /* UIKitExamples */,
 				0EA6AE2B2AC5DEC000C4E0FE /* SwiftUIExamples */,
 				0EA6ADDC2AC5DE1300C4E0FE /* Products */,
@@ -195,6 +217,7 @@
 		7A980A712AC76BE800072821 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0E3920292AD979C100EB5B78 /* Structs.swift */,
 				0EA6AE572AC5E07000C4E0FE /* Enums.swift */,
 				0EA6AE582AC5E07000C4E0FE /* Extensions.swift */,
 			);
@@ -319,8 +342,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E39203C2AD9820E00EB5B78 /* AveriaSerifLibre-Regular.ttf in Resources */,
 				0EA6AE212AC5DE9A00C4E0FE /* LaunchScreen.storyboard in Resources */,
 				0EA6AE1E2AC5DE9A00C4E0FE /* Assets.xcassets in Resources */,
+				0E3920342AD9820E00EB5B78 /* AveriaSerifLibre-Italic.ttf in Resources */,
+				0E3920322AD9820E00EB5B78 /* AveriaSerifLibre-Bold.ttf in Resources */,
 				0EA6AE1C2AC5DE9900C4E0FE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +356,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EA6AE342AC5DEC100C4E0FE /* Preview Assets.xcassets in Resources */,
+				0E3920352AD9820E00EB5B78 /* AveriaSerifLibre-Italic.ttf in Resources */,
+				0E3920332AD9820E00EB5B78 /* AveriaSerifLibre-Bold.ttf in Resources */,
+				0E39203D2AD9820E00EB5B78 /* AveriaSerifLibre-Regular.ttf in Resources */,
 				0EA6AE312AC5DEC100C4E0FE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +397,7 @@
 			files = (
 				7A980A6E2AC7661E00072821 /* AlertView.swift in Sources */,
 				0EA6AE592AC5E07000C4E0FE /* Enums.swift in Sources */,
+				0E39202A2AD979C100EB5B78 /* Structs.swift in Sources */,
 				0EA6AE5A2AC5E07100C4E0FE /* Extensions.swift in Sources */,
 				0EA6AE5E2AC5E07900C4E0FE /* AlertViewCustom.swift in Sources */,
 			);

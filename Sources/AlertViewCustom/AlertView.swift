@@ -26,24 +26,35 @@ public class AlertView {
         self.alertWindow.rootViewController = viewController
     }
     
-    public func setupContents(delegate: AlertViewDelegate, accentColor: UIColor, backgroundColor: UIColor, backgroundRadius: CGFloat = 16, icon: UIImage? = nil, title: String? = nil, message: String? = nil, agreeTitle: String, agreeCornerRadius: CGFloat = 16, cancelTitle: String? = nil, position: AlertPosition? = .center) {
+    public func setupContents(delegate: AlertViewDelegate, alertOptions: AlertOptions) {
         
         self.delegate = delegate
         
-        setupBackground(backgroundColor: backgroundColor, backgroundRadius: backgroundRadius)
-        setupIcon(icon: icon, accentColor: accentColor)
-        setupTitles(title: title, message: message)
-        setupAgreeButton(accentColor: accentColor, agreeTitle: agreeTitle, agreeCornerRadius: agreeCornerRadius)
-        setupCancelButton(accentColor: accentColor, cancelTitle: cancelTitle)
+        setupBackground(backgroundColor: alertOptions.backgroundColor, backgroundRadius: alertOptions.backgroundRadius)
+        setupFont(fontOptions: alertOptions.font ?? FontOptions())
+        setupIcon(icon: alertOptions.icon, accentColor: alertOptions.accentColor)
+        setupTitles(title: alertOptions.title, message: alertOptions.message)
+        setupAgreeButton(accentColor: alertOptions.accentColor, agreeTitle: alertOptions.agreeTitle, agreeCornerRadius: alertOptions.agreeCornerRadius)
+        setupCancelButton(accentColor: alertOptions.accentColor, cancelTitle: alertOptions.cancelTitle)
         
-        guard let position else { return }
-        setupPosition(position: position)
+        setupPosition(position: alertOptions.position ?? .center)
         setupHostVCConstraints()
     }
     
     func setupBackground(backgroundColor: UIColor, backgroundRadius: CGFloat) {
         alertView.backgroundView.backgroundColor = backgroundColor
         alertView.backgroundView.layer.cornerRadius = backgroundRadius
+    }
+    
+    func setupFont(fontOptions: FontOptions) {
+        guard let name = fontOptions.name else {
+            return
+        }
+        
+        alertView.titleLabel.font = UIFont(name: name, size: fontOptions.size)
+        alertView.messageLabel.font = UIFont(name: name, size: fontOptions.size)
+        alertView.agreeButton.titleLabel?.font = UIFont(name: name, size: fontOptions.size)
+        alertView.cancelButton.titleLabel?.font = UIFont(name: name, size: fontOptions.size)
     }
     
     func setupIcon(icon: UIImage?, accentColor: UIColor) {

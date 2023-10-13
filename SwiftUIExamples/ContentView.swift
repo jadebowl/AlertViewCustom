@@ -22,19 +22,18 @@ struct ContentView: View {
                         Text("Show Alert")
                     }.font(.system(size: 17, weight: .semibold, design: .default))
                         .foregroundColor(.white)
-                }
-            )
+                })
     }
     
     private func showAlert() {
-        alert.setupContents(delegate: self,
-                            accentColor: .systemBlue,
-                            backgroundColor: .systemBackground,
-                            icon: UIImage(systemName: "hand.wave"),
-                            title: "I am a title",
-                            message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                            agreeTitle: "Go to Settings",
-                            cancelTitle: "Cancel")
+        let alertOptions = AlertOptions(accentColor: .systemBlue,
+                                        backgroundColor: .systemBackground,
+                                        icon: UIImage(systemName: "hand.wave"),
+                                        title: "I am a title",
+                                        message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                                        agreeTitle: "Go to Settings",
+                                        cancelTitle: "Cancel")
+        alert.setupContents(delegate: self, alertOptions: alertOptions)
         alert.fadeIn(duration: 0.3)
     }
 }
