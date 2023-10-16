@@ -34,3 +34,39 @@ internal extension UIApplication {
             .first { $0.activationState == .foregroundActive }
     }
 }
+
+internal extension UIFont {
+    enum FontStyle {
+        case headline
+        case body
+        case button
+        
+        var metrics: UIFontMetrics? {
+            switch self {
+            case .headline: return UIFontMetrics(forTextStyle: .headline)
+            case .body: return UIFontMetrics(forTextStyle: .body)
+            case .button: return UIFontMetrics(forTextStyle: .body)
+            }
+        }
+        
+        var size: CGFloat {
+            switch self {
+            case .headline: return 19
+            case .body: return 17
+            case .button: return 19
+            }
+        }
+        
+        func fontName(name: String) -> String {
+            switch self {
+            case .headline, .button: return name+"-Bold"
+            case .body: return name+"-Regular"
+            }
+        }
+    }
+    
+    static func font(for style: FontStyle, name: String) -> UIFont {
+        let font = UIFont(name: style.fontName(name: name), size: style.size) ?? UIFont.systemFont(ofSize: style.size)
+        return style.metrics?.scaledFont(for: font) ?? font
+    }
+}

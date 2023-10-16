@@ -17,7 +17,6 @@ With AlertViewCustom you can create your own customised UIAlertView instead of u
 
 ## Features
 - Can be used both in UIKit and SwiftUI
- 
 - Add Icon
 - Personalise Title, Message and both Buttons
 - Possibility to hide Title, Message and Cancel Button
@@ -25,12 +24,13 @@ With AlertViewCustom you can create your own customised UIAlertView instead of u
 - Change Agree Button Corner Radius
 - Change Agree Button Color
 - Change View Background Color
+- Change Corner Radius of the whole AlertView
+- Add Animation from the Bottom when in .bottom Position
 
-### Latest:
-- Possibility to change Corner Radius of the whole AlertView
-- Added Animation from the Bottom when in .bottom Position
+### Latest Updates:
+- Possibility to change Font
 
-## Example
+## Examples
 | Position and No Title | Radius and No Message | Icon and Color | One Button |
 | ------------- | ------------- | ------------- | ------------- |
 | <img src="https://i.ibb.co/BqSsqfS/positionmessage.png" alt="positionnotitle" width="222"> | <img src="https://i.ibb.co/KV48H8z/onlytitlecorner.png" alt="radiusnomessage" width="222"> | <img src="https://i.ibb.co/fGwxSr4/icontitle.png" alt="iconandcolor" width="222"> | <img src="https://i.ibb.co/Jm4kZP4/onebutton.png" alt="onebutton" width="222"> |
@@ -43,7 +43,7 @@ To integrate using Apple's [Swift Package Manager](https://swift.org/package-man
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/jadebowl/AlertViewCustom.git", from: "1.0.0")
+    .package(url: "https://github.com/jadebowl/AlertViewCustom.git", from: "3.0.0")
 ]
 ```
 
@@ -73,16 +73,17 @@ var alert = AlertView()
 
 Customise the UI and add the Fade transition:
 ```swift
-        alert.setupContents(delegate: self,
-                            accentColor: .systemBlue,
-                            backgroundColor: .systemBackground,
-                            icon: UIImage(systemName: "hand.wave"),
-                            title: "I am a title",
-                            message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                            agreeTitle: "Go to Settings",
-                            cancelTitle: "Cancel",
-                            position: .bottom(animated: true))
-        alert.fadeIn(duration: 0.3)
+let alertSettings = AlertSettings(accentColor: .systemBlue,
+                                  backgroundColor: .systemBackground,
+                                  fontName: "AveriaSerifLibre",
+                                  icon: UIImage(systemName: "hand.wave"),
+                                  title: "I am a title",
+                                  message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                                  agreeTitle: "Go to Settings",
+                                  cancelTitle: "Cancel",
+                                  position: .bottom(animated: true))
+alert.setupContents(delegate: self, alertSettings: alertSettings)
+alert.fadeIn(duration: 0.3)
 ```
 
 Manage Actions:
