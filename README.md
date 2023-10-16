@@ -36,7 +36,7 @@ With AlertViewCustom you can create your own customised UIAlertView instead of u
 
 | Font Custom | 
 | ------------- |
-| <img src="https://i.ibb.co/CJc0thj/fontcustom.png" alt="fontcustom" width="222"> |
+| <img src="https://i.ibb.co/tPt2hDp/fontcustom.png" alt="fontcustom" width="222"> |
 
 ## Installation
 
