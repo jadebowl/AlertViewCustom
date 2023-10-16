@@ -43,7 +43,7 @@ To integrate using Apple's [Swift Package Manager](https://swift.org/package-man
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/jadebowl/AlertViewCustom.git", from: "3.0.0")
+    .package(url: "https://github.com/jadebowl/AlertViewCustom.git", from: "4.0.0")
 ]
 ```
 
