@@ -1,7 +1,7 @@
 import UIKit
 
 public struct AlertSettings {
-    public init(accentColor: UIColor, 
+    public init(accentColor: UIColor,
                 backgroundColor: UIColor,
                 backgroundRadius: CGFloat = 16,
                 fontName: String? = nil,
