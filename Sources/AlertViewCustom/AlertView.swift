@@ -1,6 +1,6 @@
 import UIKit
 
-public protocol AlertViewDelegate {
+public protocol AlertViewDelegate: AnyObject {
     func agreeAction()
     func cancelAction()
 }
@@ -14,7 +14,7 @@ public class AlertView {
     private let alertView: AlertViewCustom
     private let hostViewController: UIViewController
     private let alertWindow: UIWindow
-    
+
     public init() {
         self.alertView = AlertViewCustom()
         self.alertWindow = UIWindow()
@@ -91,13 +91,16 @@ public class AlertView {
             alertView.backgroundView.translatesAutoresizingMaskIntoConstraints = false
             alertView.alertCenterConstraint?.isActive = false
             alertView.alertTopConstraint?.isActive = false
-            alertView.alertBottomConstraint = alertView.backgroundView.bottomAnchor.constraint(equalTo: alertView.contentView.bottomAnchor, constant: -32)
+            alertView.alertBottomConstraint = alertView.backgroundView.bottomAnchor
+                .constraint(equalTo: alertView.contentView.bottomAnchor, constant: -32)
             alertView.alertBottomConstraint?.isActive = true
         default:
             alertView.backgroundView.translatesAutoresizingMaskIntoConstraints = false
             alertView.alertBottomConstraint?.isActive = false
-            alertView.alertTopConstraint = alertView.backgroundView.topAnchor.constraint(lessThanOrEqualTo: alertView.contentView.topAnchor, constant: 300)
-            alertView.alertCenterConstraint = alertView.backgroundView.centerYAnchor.constraint(equalTo: alertView.contentView.centerYAnchor)
+            alertView.alertTopConstraint = alertView.backgroundView.topAnchor
+                .constraint(lessThanOrEqualTo: alertView.contentView.topAnchor, constant: 300)
+            alertView.alertCenterConstraint = alertView.backgroundView.centerYAnchor
+                .constraint(equalTo: alertView.contentView.centerYAnchor)
             alertView.alertCenterConstraint?.isActive = true
             alertView.alertTopConstraint?.isActive = true
         }
@@ -109,7 +112,8 @@ public class AlertView {
         alertView.topAnchor.constraint(equalTo: hostViewController.view.topAnchor, constant: 0).isActive = true
         alertView.bottomAnchor.constraint(equalTo: hostViewController.view.bottomAnchor, constant: 0).isActive = true
         alertView.leadingAnchor.constraint(equalTo: hostViewController.view.leadingAnchor, constant: 0).isActive = true
-        alertView.trailingAnchor.constraint(equalTo: hostViewController.view.trailingAnchor, constant: 0).isActive = true
+        alertView.trailingAnchor.constraint(equalTo: hostViewController.view.trailingAnchor, 
+                                            constant: 0).isActive = true
         alertView.alpha = 0.0
     }
     
@@ -145,10 +149,10 @@ public class AlertView {
             if self.alertView.alertBottomAnimation {
                 self.alertView.contentView.layoutIfNeeded()
             }
-        }) { completed in
+        }, completion: { completed in
             guard completed else { return }
             self.removeWindow()
-        }
+        })
     }
     
     private func removeWindow() {

@@ -246,6 +246,7 @@
 				0EA6AE0F2AC5DE9900C4E0FE /* Frameworks */,
 				0EA6AE102AC5DE9900C4E0FE /* Resources */,
 				0EA6AE542AC5DF9C00C4E0FE /* Embed Frameworks */,
+				8D3CA65B2ADDC871004BE429 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -265,6 +266,7 @@
 				0EA6AE272AC5DEC000C4E0FE /* Frameworks */,
 				0EA6AE282AC5DEC000C4E0FE /* Resources */,
 				0EA6AE652AC5E0F100C4E0FE /* Embed Frameworks */,
+				8D3CA65C2ADDC9B8004BE429 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -371,6 +373,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8D3CA65B2ADDC871004BE429 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		8D3CA65C2ADDC9B8004BE429 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0EA6AE0E2AC5DE9900C4E0FE /* Sources */ = {
@@ -573,6 +616,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 788S89FDTP;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UIKitExamples/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -603,6 +647,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 788S89FDTP;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UIKitExamples/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -634,6 +679,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIExamples/Preview Content\"";
 				DEVELOPMENT_TEAM = 788S89FDTP;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -664,6 +710,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIExamples/Preview Content\"";
 				DEVELOPMENT_TEAM = 788S89FDTP;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

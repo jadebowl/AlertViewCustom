@@ -1,0 +1,8 @@
+disabled_rules:
+  - trailing_whitespace
+
+analyzer_rules:
+  - explicit_self
+
+included:
+  - Sources
