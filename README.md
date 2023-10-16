@@ -5,7 +5,6 @@
 
 [![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fjadebowl%2FAlertViewCustom%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/jadebowl/AlertViewCustom)
 
-[![codebeat badge](https://codebeat.co/badges/9437aacb-cfac-43ab-b67e-96f171dbbe66)](https://codebeat.co/projects/github-com-jadebowl-alertviewcustom-main)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/85d7d6bc1ccb4666ab9ef5b251b27621)](https://app.codacy.com/gh/jadebowl/AlertViewCustom/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
 
