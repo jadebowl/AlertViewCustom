@@ -26,18 +26,23 @@ public class AlertView {
         self.alertWindow.rootViewController = viewController
     }
     
-    public func setupContents(delegate: AlertViewDelegate, alertSettings: AlertSettings) {
+    public func setupContents(delegate: AlertViewDelegate, settings: AlertSettings) {
         
         self.delegate = delegate
         
-        setupBackground(backgroundColor: alertSettings.backgroundColor, backgroundRadius: alertSettings.backgroundRadius)
-        setupFont(fontName: alertSettings.fontName)
-        setupIcon(icon: alertSettings.icon, accentColor: alertSettings.accentColor)
-        setupTitles(title: alertSettings.title, message: alertSettings.message)
-        setupAgreeButton(accentColor: alertSettings.accentColor, agreeTitle: alertSettings.agreeTitle, agreeCornerRadius: alertSettings.agreeCornerRadius)
-        setupCancelButton(accentColor: alertSettings.accentColor, cancelTitle: alertSettings.cancelTitle)
+        setupBackground(backgroundColor: settings.backgroundColor, 
+                        backgroundRadius: settings.backgroundRadius)
         
-        setupPosition(position: alertSettings.position)
+        setupFont(fontName: settings.fontName)
+        setupIcon(icon: settings.icon,accentColor: settings.accentColor)
+        setupTitles(title: settings.title, message: settings.message)
+        
+        setupAgreeButton(accentColor: settings.accentColor,
+                         agreeTitle: settings.agreeTitle,
+                         agreeCornerRadius: settings.agreeCornerRadius)
+        
+        setupCancelButton(accentColor: settings.accentColor, cancelTitle: settings.cancelTitle)
+        setupPosition(position: settings.position)
         setupHostVCConstraints()
     }
     
@@ -50,7 +55,6 @@ public class AlertView {
         guard fontName != nil, let fontName else {
             return
         }
-        
         alertView.titleLabel.font = UIFont.font(for: .headline, name: fontName)
         alertView.messageLabel.font = UIFont.font(for: .body, name: fontName)
         alertView.agreeButton.titleLabel?.font = UIFont.font(for: .button, name: fontName)

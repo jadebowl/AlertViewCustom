@@ -70,5 +70,3 @@ internal extension UIFont {
         return style.metrics?.scaledFont(for: font) ?? font
     }
 }
-
-

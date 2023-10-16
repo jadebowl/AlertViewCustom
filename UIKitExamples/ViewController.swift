@@ -26,7 +26,7 @@ class ViewController: UIViewController {
                                         agreeTitle: "Go to Settings",
                                         cancelTitle: "Cancel",
                                         position: .bottom(animated: true))
-        alert.setupContents(delegate: self, alertSettings: alertSettings)
+        alert.setupContents(delegate: self, settings: alertSettings)
         alert.fadeIn(duration: 0.3)
     }
     

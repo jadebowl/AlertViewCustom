@@ -1,7 +1,17 @@
 import UIKit
 
 public struct AlertSettings {
-    public init(accentColor: UIColor, backgroundColor: UIColor, backgroundRadius: CGFloat = 16, fontName: String? = nil, icon: UIImage? = nil, title: String? = nil, message: String? = nil, agreeTitle: String, agreeCornerRadius: CGFloat = 16, cancelTitle: String? = nil, position: AlertPosition? = .center) {
+    public init(accentColor: UIColor, 
+                backgroundColor: UIColor,
+                backgroundRadius: CGFloat = 16,
+                fontName: String? = nil,
+                icon: UIImage? = nil,
+                title: String? = nil,
+                message: String? = nil,
+                agreeTitle: String,
+                agreeCornerRadius: CGFloat = 16,
+                cancelTitle: String? = nil,
+                position: AlertPosition? = .center) {
         self.accentColor = accentColor
         self.backgroundColor = backgroundColor
         self.backgroundRadius = backgroundRadius
@@ -14,7 +24,6 @@ public struct AlertSettings {
         self.cancelTitle = cancelTitle
         self.position = position
     }
-    
     let accentColor: UIColor
     let backgroundColor: UIColor
     let backgroundRadius: CGFloat

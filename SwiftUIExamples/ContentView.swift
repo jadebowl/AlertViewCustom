@@ -33,7 +33,7 @@ struct ContentView: View {
                                         message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                                         agreeTitle: "Go to Settings",
                                         cancelTitle: "Cancel")
-        alert.setupContents(delegate: self, alertSettings: alertSettings)
+        alert.setupContents(delegate: self, settings: alertSettings)
         alert.fadeIn(duration: 0.3)
     }
 }
