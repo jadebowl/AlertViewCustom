@@ -30,17 +30,13 @@ public class AlertView {
         
         self.delegate = delegate
         
-        setupBackground(backgroundColor: settings.backgroundColor, 
-                        backgroundRadius: settings.backgroundRadius)
-        
+        setupBackground(backgroundColor: settings.backgroundColor, backgroundRadius: settings.backgroundRadius)
         setupFont(fontName: settings.fontName)
-        setupIcon(icon: settings.icon,accentColor: settings.accentColor)
+        setupIcon(icon: settings.icon, accentColor: settings.accentColor)
         setupTitles(title: settings.title, message: settings.message)
-        
         setupAgreeButton(accentColor: settings.accentColor,
                          agreeTitle: settings.agreeTitle,
                          agreeCornerRadius: settings.agreeCornerRadius)
-        
         setupCancelButton(accentColor: settings.accentColor, cancelTitle: settings.cancelTitle)
         setupPosition(position: settings.position)
         setupHostVCConstraints()
