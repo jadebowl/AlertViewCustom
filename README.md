@@ -34,6 +34,10 @@ With AlertViewCustom you can create your own customised UIAlertView instead of u
 | ------------- | ------------- | ------------- | ------------- |
 | <img src="https://i.ibb.co/BqSsqfS/positionmessage.png" alt="positionnotitle" width="222"> | <img src="https://i.ibb.co/KV48H8z/onlytitlecorner.png" alt="radiusnomessage" width="222"> | <img src="https://i.ibb.co/fGwxSr4/icontitle.png" alt="iconandcolor" width="222"> | <img src="https://i.ibb.co/Jm4kZP4/onebutton.png" alt="onebutton" width="222"> |
 
+| Font Custom | 
+| ------------- |
+| <img src="https://i.ibb.co/CJc0thj/fontcustom.png" alt="fontcustom" width="222"> |
+
 ## Installation
 
 ### Swift Package Manager
@@ -81,7 +85,7 @@ let alertSettings = AlertSettings(accentColor: .systemBlue,
                                   agreeTitle: "Go to Settings",
                                   cancelTitle: "Cancel",
                                   position: .bottom(animated: true))
-alert.setupContents(delegate: self, alertSettings: alertSettings)
+alert.setupContents(delegate: self, settings: alertSettings)
 alert.fadeIn(duration: 0.3)
 ```
 
