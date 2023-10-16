@@ -33,9 +33,7 @@ With AlertViewCustom you can create your own customised UIAlertView instead of u
 | Position and No Title | Radius and No Message | Icon and Color | One Button |
 | ------------- | ------------- | ------------- | ------------- |
 | <img src="https://i.ibb.co/BqSsqfS/positionmessage.png" alt="positionnotitle" width="222"> | <img src="https://i.ibb.co/KV48H8z/onlytitlecorner.png" alt="radiusnomessage" width="222"> | <img src="https://i.ibb.co/fGwxSr4/icontitle.png" alt="iconandcolor" width="222"> | <img src="https://i.ibb.co/Jm4kZP4/onebutton.png" alt="onebutton" width="222"> |
-
 | Font Custom | 
-| ------------- |
 | <img src="https://i.ibb.co/tPt2hDp/fontcustom.png" alt="fontcustom" width="222"> |
 
 ## Installation
