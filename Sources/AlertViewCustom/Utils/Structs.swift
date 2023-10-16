@@ -1,11 +1,11 @@
 import UIKit
 
-public struct AlertOptions {
-    public init(accentColor: UIColor, backgroundColor: UIColor, backgroundRadius: CGFloat = 16, font: FontOptions? = FontOptions(), icon: UIImage? = nil, title: String? = nil, message: String? = nil, agreeTitle: String, agreeCornerRadius: CGFloat = 16, cancelTitle: String? = nil, position: AlertPosition? = .center) {
+public struct AlertSettings {
+    public init(accentColor: UIColor, backgroundColor: UIColor, backgroundRadius: CGFloat = 16, fontName: String? = nil, icon: UIImage? = nil, title: String? = nil, message: String? = nil, agreeTitle: String, agreeCornerRadius: CGFloat = 16, cancelTitle: String? = nil, position: AlertPosition? = .center) {
         self.accentColor = accentColor
         self.backgroundColor = backgroundColor
         self.backgroundRadius = backgroundRadius
-        self.font = font
+        self.fontName = fontName
         self.icon = icon
         self.title = title
         self.message = message
@@ -18,7 +18,7 @@ public struct AlertOptions {
     let accentColor: UIColor
     let backgroundColor: UIColor
     let backgroundRadius: CGFloat
-    let font: FontOptions?
+    let fontName: String?
     let icon: UIImage?
     let title: String?
     let message: String?
@@ -26,14 +26,4 @@ public struct AlertOptions {
     let agreeCornerRadius: CGFloat
     let cancelTitle: String?
     let position: AlertPosition?
-}
-
-public struct FontOptions {
-    public init(name: String? = nil, size: CGFloat = 17) {
-        self.name = name
-        self.size = size
-    }
-    
-    let name: String?
-    let size: CGFloat
 }

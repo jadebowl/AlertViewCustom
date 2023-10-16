@@ -17,16 +17,16 @@ class ViewController: UIViewController {
     }
     
     func setupAlert() {
-        let alertOptions = AlertOptions(accentColor: .systemBlue,
+        let alertSettings = AlertSettings(accentColor: .systemBlue,
                                         backgroundColor: .systemBackground,
-                                        font: FontOptions(name: "AveriaSerifLibre-Regular", size: 22),
+                                        fontName: "AveriaSerifLibre",
                                         icon: UIImage(systemName: "hand.wave"),
                                         title: "I am a title",
                                         message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                                         agreeTitle: "Go to Settings",
                                         cancelTitle: "Cancel",
                                         position: .bottom(animated: true))
-        alert.setupContents(delegate: self, alertOptions: alertOptions)
+        alert.setupContents(delegate: self, alertSettings: alertSettings)
         alert.fadeIn(duration: 0.3)
     }
     

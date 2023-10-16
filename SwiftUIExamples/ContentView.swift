@@ -26,14 +26,14 @@ struct ContentView: View {
     }
     
     private func showAlert() {
-        let alertOptions = AlertOptions(accentColor: .systemBlue,
+        let alertSettings = AlertSettings(accentColor: .systemBlue,
                                         backgroundColor: .systemBackground,
                                         icon: UIImage(systemName: "hand.wave"),
                                         title: "I am a title",
                                         message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                                         agreeTitle: "Go to Settings",
                                         cancelTitle: "Cancel")
-        alert.setupContents(delegate: self, alertOptions: alertOptions)
+        alert.setupContents(delegate: self, alertSettings: alertSettings)
         alert.fadeIn(duration: 0.3)
     }
 }
