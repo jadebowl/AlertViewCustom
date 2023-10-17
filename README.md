@@ -39,10 +39,10 @@ With AlertViewCustom you can create your own customised UIAlertView instead of u
     <th>One Button</th>
   </tr>
   <tr>
-    <td align="center"><img src="https://i.ibb.co/pQhJpns/notitle.png" alt="Position & No Title" width="200"></td>
-    <td align="center"><img src="https://i.ibb.co/hC8CT2C/fontcustom.png" alt="Font Custom" width="200"></td>
-    <td align="center"><img src="https://i.ibb.co/ZfqtykP/iconcolor.png" alt="Icon & Color" width="200"></td>
-    <td align="center"><img src="https://i.ibb.co/RNQFVKF/onebutton.png" alt="One Button" width="200"></td>
+    <td align="center"><img src="https://i.ibb.co/pQhJpns/notitle.png" alt="Position & No Title" height="325" width="150"></td>
+    <td align="center"><img src="https://i.ibb.co/hC8CT2C/fontcustom.png" alt="Font Custom" height="325" width="150"></td>
+    <td align="center"><img src="https://i.ibb.co/ZfqtykP/iconcolor.png" alt="Icon & Color" height="325" width="150"></td>
+    <td align="center"><img src="https://i.ibb.co/RNQFVKF/onebutton.png" alt="One Button" height="325" width="150"></td>
   </tr>
    <tr>
     <th>Outlined Button & View Radius</th>
@@ -51,8 +51,8 @@ With AlertViewCustom you can create your own customised UIAlertView instead of u
     <th></th>
   </tr>
   <tr>
-    <td align="center"><img src="https://i.ibb.co/YXjWGB2/outlinebutton.png" alt="Outlined Button & View Radius" width="200"></td>
-    <td align="center"><img src="https://i.ibb.co/X2NZ3t3/nomessage.png" alt="Radius & No Message" width="200"></td>
+    <td align="center"><img src="https://i.ibb.co/YXjWGB2/outlinebutton.png" alt="Outlined Button & View Radius" height="325" width="150"></td>
+    <td align="center"><img src="https://i.ibb.co/X2NZ3t3/nomessage.png" alt="Radius & No Message" height="325" width="150"></td>
     <td></td>
     <td></td>
   </tr>
