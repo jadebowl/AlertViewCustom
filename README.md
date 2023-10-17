@@ -28,13 +28,35 @@ With AlertViewCustom you can create your own customised UIAlertView instead of u
 
 ### Latest Updates:
 - Possibility to change Font
+- Possibility to have the Agree Button Outlined
 
 ## Examples
-| Position and No Title | Radius and No Message | Icon and Color | One Button |
-| --------------------- | -------------------- | -------------- | ---------- |
-| ![positionnotitle](https://i.ibb.co/BqSsqfS/positionmessage.png) | ![radiusnomessage](https://i.ibb.co/KV48H8z/onlytitlecorner.png) | ![iconandcolor](https://i.ibb.co/fGwxSr4/icontitle.png) | ![onebutton](https://i.ibb.co/Jm4kZP4/onebutton.png) |
-| <p align="center"><b>Font Custom</b></p> | | | |
-| ![fontcustom](https://i.ibb.co/B2ffttg/fontcustom.png) | | | |
+<table>
+  <tr>
+    <th>Position & No Title</th>
+    <th>Font Custom</th>
+    <th>Icon & Color</th>
+    <th>One Button</th>
+  </tr>
+  <tr>
+    <td align="center"><img src="https://i.ibb.co/pQhJpns/notitle.png" alt="Position & No Title" width="200"></td>
+    <td align="center"><img src="https://i.ibb.co/hC8CT2C/fontcustom.png" alt="Font Custom" width="200"></td>
+    <td align="center"><img src="https://i.ibb.co/ZfqtykP/iconcolor.png" alt="Icon & Color" width="200"></td>
+    <td align="center"><img src="https://i.ibb.co/RNQFVKF/onebutton.png" alt="One Button" width="200"></td>
+  </tr>
+   <tr>
+    <th>Outlined Button & View Radius</th>
+    <th>Radius & No Message</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td align="center"><img src="https://i.ibb.co/YXjWGB2/outlinebutton.png" alt="Outlined Button & View Radius" width="200"></td>
+    <td align="center"><img src="https://i.ibb.co/X2NZ3t3/nomessage.png" alt="Radius & No Message" width="200"></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
 
 ## Installation
 
