@@ -27,7 +27,6 @@ public class AlertView {
     }
     
     public func setupContents(delegate: AlertViewDelegate, settings: AlertSettings) {
-        
         self.delegate = delegate
         
         setupBackground(backgroundColor: settings.backgroundColor, backgroundRadius: settings.backgroundRadius)

@@ -57,6 +57,11 @@ internal extension UIFont {
             }
         }
         
+        /**
+          Customise the font
+           - parameters:
+              - name: applies "-Regular" to message and cancel button and "-Bold" to title and agree button
+        */
         func fontName(name: String) -> String {
             switch self {
             case .headline, .button: return name+"-Bold"
