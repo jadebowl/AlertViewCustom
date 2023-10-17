@@ -48,7 +48,7 @@ public class AlertView {
         alertView.titleLabel.textColor = backgroundColor.contrastColor()
         alertView.messageLabel.textColor = backgroundColor.contrastColor()
         
-        let titleColor = borderWidth != 0 ? backgroundColor.contrastColor() : accentColor.contrastColor()
+        let titleColor = borderWidth != 0 ? accentColor : accentColor.contrastColor()
         alertView.agreeButton.setTitleColor(titleColor, for: .normal)
     }
     

@@ -19,14 +19,14 @@ class ViewController: UIViewController {
     func setupAlert() {
         let agreeButton = AgreeButton(title: "Go to Settings", borderWidth: 3)
         let alertSettings = AlertSettings(accentColor: .systemBlue,
-                                        backgroundColor: .systemBackground,
-                                        fontName: "AveriaSerifLibre",
-                                        icon: UIImage(systemName: "hand.wave"),
-                                        title: "I am a title",
-                                        message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                                        agreeButton: agreeButton,
-                                        cancelTitle: "Cancel",
-                                        position: .bottom(animated: true))
+                                          backgroundColor: .systemBackground,
+                                          fontName: "AveriaSerifLibre",
+                                          icon: UIImage(systemName: "hand.wave"),
+                                          title: "I am a title",
+                                          message: "Lorem ipsum dolor sit amet, consectetuadipiscing elit, sed do eiusmod tempor incididunt ulabore et dolore magna aliqua.",
+                                          agreeButton: agreeButton,
+                                          cancelTitle: "Cancel",
+                                          position: .bottom(animated: true))
         alert.setupContents(delegate: self, settings: alertSettings)
         alert.fadeIn(duration: 0.3)
     }
