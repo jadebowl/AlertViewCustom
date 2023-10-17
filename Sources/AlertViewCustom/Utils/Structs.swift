@@ -10,9 +10,7 @@ import UIKit
       - icon
       - title
       - message
-      - agreeTitle
-      - agreeCornerRadius: applies a corner radius to the agree button
-      - agreeBorderWidth: applies a border with the accentColor and makes the background clear
+      - agreeButton: with a title, a corner radius and a border width
       - cancelTitle
       - position
 */
@@ -50,6 +48,13 @@ public struct AlertSettings {
     let position: AlertPosition?
 }
 
+/**
+  Customise the agree button
+   - parameters:
+      - title
+      - cornerRadius
+      - borderWidth: applies a border with the accentColor and makes the background clear
+*/
 public struct AgreeButton {
     public init(title: String, cornerRadius: CGFloat = 16, borderWidth: CGFloat = 0) {
         self.title = title
