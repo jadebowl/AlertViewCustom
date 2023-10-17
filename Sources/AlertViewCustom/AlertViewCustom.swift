@@ -77,7 +77,7 @@ public class AlertViewCustom: UIView {
         return button
     }()
     
-    weak var delegate: AlertViewDelegate?
+    var delegate: AlertViewDelegate?
     
     var alertCenterConstraint: NSLayoutConstraint?
     var alertTopConstraint: NSLayoutConstraint?

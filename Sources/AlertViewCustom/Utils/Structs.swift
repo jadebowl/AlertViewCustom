@@ -12,6 +12,7 @@ import UIKit
       - message
       - agreeTitle
       - agreeCornerRadius: applies a corner radius to the agree button
+      - agreeBorderWidth: applies a border with the accentColor and makes the background clear
       - cancelTitle
       - position
 */
@@ -23,8 +24,7 @@ public struct AlertSettings {
                 icon: UIImage? = nil,
                 title: String? = nil,
                 message: String? = nil,
-                agreeTitle: String,
-                agreeCornerRadius: CGFloat = 16,
+                agreeButton: AgreeButton,
                 cancelTitle: String? = nil,
                 position: AlertPosition? = .center) {
         self.accentColor = accentColor
@@ -34,8 +34,7 @@ public struct AlertSettings {
         self.icon = icon
         self.title = title
         self.message = message
-        self.agreeTitle = agreeTitle
-        self.agreeCornerRadius = agreeCornerRadius
+        self.agreeButton = agreeButton
         self.cancelTitle = cancelTitle
         self.position = position
     }
@@ -46,8 +45,18 @@ public struct AlertSettings {
     let icon: UIImage?
     let title: String?
     let message: String?
-    let agreeTitle: String
-    let agreeCornerRadius: CGFloat
+    let agreeButton: AgreeButton
     let cancelTitle: String?
     let position: AlertPosition?
+}
+
+public struct AgreeButton {
+    public init(title: String, cornerRadius: CGFloat = 16, borderWidth: CGFloat = 0) {
+        self.title = title
+        self.cornerRadius = cornerRadius
+        self.borderWidth = borderWidth
+    }
+    let title: String
+    let cornerRadius: CGFloat
+    let borderWidth: CGFloat
 }

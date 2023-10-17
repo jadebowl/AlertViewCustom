@@ -1,6 +1,6 @@
 import UIKit
 
-public protocol AlertViewDelegate: AnyObject {
+public protocol AlertViewDelegate {
     func agreeAction()
     func cancelAction()
 }
@@ -12,7 +12,7 @@ public class AlertView {
         }
     }
     private let alertView: AlertViewCustom
-    private let hostViewController: UIViewController
+    private let hostVC: UIViewController
     private let alertWindow: UIWindow
 
     public init() {
@@ -22,23 +22,34 @@ public class AlertView {
         
         let viewController = UIViewController()
         viewController.view.backgroundColor = .clear
-        self.hostViewController = viewController
+        self.hostVC = viewController
         self.alertWindow.rootViewController = viewController
     }
     
     public func setupContents(delegate: AlertViewDelegate, settings: AlertSettings) {
         self.delegate = delegate
-        
+        setupContrastColor(accentColor: settings.accentColor, 
+                           backgroundColor: settings.backgroundColor,
+                           borderWidth: settings.agreeButton.borderWidth)
         setupBackground(backgroundColor: settings.backgroundColor, backgroundRadius: settings.backgroundRadius)
         setupFont(fontName: settings.fontName)
         setupIcon(icon: settings.icon, accentColor: settings.accentColor)
         setupTitles(title: settings.title, message: settings.message)
         setupAgreeButton(accentColor: settings.accentColor,
-                         agreeTitle: settings.agreeTitle,
-                         agreeCornerRadius: settings.agreeCornerRadius)
+                         title: settings.agreeButton.title,
+                         cornerRadius: settings.agreeButton.cornerRadius,
+                         borderWidth: settings.agreeButton.borderWidth)
         setupCancelButton(accentColor: settings.accentColor, cancelTitle: settings.cancelTitle)
         setupPosition(position: settings.position)
         setupHostVCConstraints()
+    }
+    
+    func setupContrastColor(accentColor: UIColor, backgroundColor: UIColor, borderWidth: CGFloat) {
+        alertView.titleLabel.textColor = backgroundColor.contrastColor()
+        alertView.messageLabel.textColor = backgroundColor.contrastColor()
+        
+        let titleColor = borderWidth != 0 ? backgroundColor.contrastColor() : accentColor.contrastColor()
+        alertView.agreeButton.setTitleColor(titleColor, for: .normal)
     }
     
     func setupBackground(backgroundColor: UIColor, backgroundRadius: CGFloat) {
@@ -69,11 +80,12 @@ public class AlertView {
         alertView.messageLabel.isHidden = alertView.messageLabel.text == nil
     }
     
-    func setupAgreeButton(accentColor: UIColor, agreeTitle: String, agreeCornerRadius: CGFloat) {
-        alertView.agreeButton.setTitle(agreeTitle, for: .normal)
-        alertView.agreeButton.setTitleColor(accentColor.contrastColor(), for: .normal)
-        alertView.agreeButton.backgroundColor = accentColor
-        alertView.agreeButton.layer.cornerRadius = agreeCornerRadius
+    func setupAgreeButton(accentColor: UIColor, title: String, cornerRadius: CGFloat, borderWidth: CGFloat) {
+        alertView.agreeButton.setTitle(title, for: .normal)
+        alertView.agreeButton.backgroundColor = borderWidth != 0 ? .clear : accentColor
+        alertView.agreeButton.layer.borderColor = accentColor.cgColor
+        alertView.agreeButton.layer.borderWidth = borderWidth
+        alertView.agreeButton.layer.cornerRadius = cornerRadius
     }
     
     func setupCancelButton(accentColor: UIColor, cancelTitle: String?) {
@@ -106,13 +118,12 @@ public class AlertView {
     }
     
     func setupHostVCConstraints() {
-        hostViewController.view.addSubview(alertView)
+        hostVC.view.addSubview(alertView)
         alertView.translatesAutoresizingMaskIntoConstraints = false
-        alertView.topAnchor.constraint(equalTo: hostViewController.view.topAnchor, constant: 0).isActive = true
-        alertView.bottomAnchor.constraint(equalTo: hostViewController.view.bottomAnchor, constant: 0).isActive = true
-        alertView.leadingAnchor.constraint(equalTo: hostViewController.view.leadingAnchor, constant: 0).isActive = true
-        alertView.trailingAnchor.constraint(equalTo: hostViewController.view.trailingAnchor, 
-                                            constant: 0).isActive = true
+        alertView.topAnchor.constraint(equalTo: hostVC.view.topAnchor, constant: 0).isActive = true
+        alertView.bottomAnchor.constraint(equalTo: hostVC.view.bottomAnchor, constant: 0).isActive = true
+        alertView.leadingAnchor.constraint(equalTo: hostVC.view.leadingAnchor, constant: 0).isActive = true
+        alertView.trailingAnchor.constraint(equalTo: hostVC.view.trailingAnchor, constant: 0).isActive = true
         alertView.alpha = 0.0
     }
     
