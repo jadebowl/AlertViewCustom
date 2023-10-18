@@ -45,7 +45,7 @@ With AlertViewCustom you can create your own customised UIAlertView instead of u
     <td align="center"><img src="https://i.ibb.co/RNQFVKF/onebutton.png" alt="One Button" height="325" width="150"></td>
   </tr>
    <tr>
-    <th>Outlined Button & View Radius</th>
+    <th>Outlined Button</th>
     <th>Radius & No Message</th>
     <th></th>
     <th></th>

@@ -1,6 +1,6 @@
 import UIKit
 
-public protocol AlertViewDelegate {
+public protocol AlertViewDelegate: AnyObject {
     func agreeAction()
     func cancelAction()
 }
