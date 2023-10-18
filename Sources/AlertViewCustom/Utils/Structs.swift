@@ -1,16 +1,17 @@
 import UIKit
 
 /**
-  Customise your alert
+  All the alert properties you can customise
    - parameters:
-      - accentColor: applies color to icon, agree button background and cancel button title
+      - accentColor: Applies color to icon, agree button background and cancel button title
       - backgroundColor
-      - backgroundRadius: applies a corner radius to the alert view
-      - fontName: applies a custom font to title, message, agree button and cancel button
+      - backgroundRadius: Applies a corner radius to the alert view
+      - fontName: Applies a custom font to title, message, agree button and cancel button. 
+                  Font files imported in the project folder have to be named with suffixes "-Regular" and "-Bold"
       - icon
       - title
       - message
-      - agreeButton: with a title, a corner radius and a border width
+      - agreeButton: With a title, a corner radius and a border width
       - cancelTitle
       - position
 */
@@ -53,7 +54,7 @@ public struct AlertSettings {
    - parameters:
       - title
       - cornerRadius
-      - borderWidth: applies a border with the accentColor and makes the background clear
+      - borderWidth: Applies a border with the accentColor and makes the background clear
 */
 public struct AgreeButton {
     public init(title: String, cornerRadius: CGFloat = 16, borderWidth: CGFloat = 0) {

@@ -5,6 +5,9 @@ public protocol AlertViewDelegate: AnyObject {
     func cancelAction()
 }
 
+/**
+ With AlertViewCustom you can create your own customised UIAlertView instead of using the default one from Apple, which doesn't always fit in with the style of your app.
+*/
 public class AlertView {
     public var delegate: AlertViewDelegate? {
         didSet {
@@ -26,6 +29,12 @@ public class AlertView {
         self.alertWindow.rootViewController = viewController
     }
     
+    /**
+     Setup the alert contents
+       - parameters:
+          - delegate: To manage the agree button and cancel button actions
+          - settings: To customise your alert
+    */
     public func setupContents(delegate: AlertViewDelegate, settings: AlertSettings) {
         self.delegate = delegate
         setupContrastColor(accentColor: settings.accentColor, 
@@ -127,6 +136,11 @@ public class AlertView {
         alertView.alpha = 0.0
     }
     
+    /**
+     Make the alert appear
+       - parameters:
+          - duration
+    */
     public func fadeIn(duration: TimeInterval) {
         if let activeScene = UIApplication.shared.activeWindowScene {
             alertWindow.windowScene = activeScene
@@ -149,6 +163,11 @@ public class AlertView {
         }
     }
     
+    /**
+     Make the alert disappear
+       - parameters:
+          - duration
+    */
     public func removeFromSuperView(duration: TimeInterval) {
         if alertView.alertBottomAnimation {
             alertView.alertBottomConstraint?.constant = -32
