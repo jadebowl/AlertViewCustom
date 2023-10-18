@@ -1,42 +1,32 @@
 //
-//  ViewController.swift
-//  UIKitExamples
+//  ContentViewModel.swift
+//  SwiftUIExamples
 //
-//  Created by Giada Ciotola on 28/09/23.
+//  Created by Giada Ciotola on 18/10/23.
 //
 
-import UIKit
+import SwiftUI
 import AlertViewCustom
 
-class ViewController: UIViewController {
+class ContentViewModel: ObservableObject {
+    let alert = AlertView()
     
-    var alert = AlertView()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    func setupAlert() {
-        let agreeButton = AgreeButton(title: "Go to Settings", borderWidth: 3)
+    func showAlert() {
+        let agreeButton = AgreeButton(title: "Go to Settings")
         let alertSettings = AlertSettings(accentColor: .systemBlue,
                                           backgroundColor: .systemBackground,
-                                          fontName: "AveriaSerifLibre",
                                           icon: UIImage(systemName: "hand.wave"),
                                           title: "I am a title",
-                                          message: "Lorem ipsum dolor sit amet, consectetuadipiscing elit, sed do eiusmod tempor incididunt ulabore et dolore magna aliqua.",
+                                          message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                                           agreeButton: agreeButton,
                                           cancelTitle: "Cancel",
-                                          position: .bottom(animated: true))
+                                          position: .center)
         alert.setupContents(delegate: self, settings: alertSettings)
         alert.fadeIn(duration: 0.3)
     }
-    
-    @IBAction func showAlert(_ sender: UIButton) {
-        setupAlert()
-    }
 }
 
-extension ViewController: AlertViewDelegate {
+extension ContentViewModel: AlertViewDelegate {
     func agreeAction() {
         // MARK: - Example: Go to Settings
         guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }

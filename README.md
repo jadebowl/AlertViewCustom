@@ -28,13 +28,35 @@ With AlertViewCustom you can create your own customised UIAlertView instead of u
 
 ### Latest Updates:
 - Possibility to change Font
+- Possibility to have the Agree Button Outlined
 
 ## Examples
-| Position and No Title | Radius and No Message | Icon and Color | One Button |
-| --------------------- | -------------------- | -------------- | ---------- |
-| ![positionnotitle](https://i.ibb.co/BqSsqfS/positionmessage.png) | ![radiusnomessage](https://i.ibb.co/KV48H8z/onlytitlecorner.png) | ![iconandcolor](https://i.ibb.co/fGwxSr4/icontitle.png) | ![onebutton](https://i.ibb.co/Jm4kZP4/onebutton.png) |
-| <p align="center"><b>Font Custom</b></p> | | | |
-| ![fontcustom](https://i.ibb.co/B2ffttg/fontcustom.png) | | | |
+<table>
+  <tr>
+    <th>Position & No Title</th>
+    <th>Font Custom</th>
+    <th>Icon & Color</th>
+    <th>One Button</th>
+  </tr>
+  <tr>
+    <td align="center"><img src="https://i.ibb.co/pQhJpns/notitle.png" alt="Position & No Title" height="325" width="150"></td>
+    <td align="center"><img src="https://i.ibb.co/hC8CT2C/fontcustom.png" alt="Font Custom" height="325" width="150"></td>
+    <td align="center"><img src="https://i.ibb.co/ZfqtykP/iconcolor.png" alt="Icon & Color" height="325" width="150"></td>
+    <td align="center"><img src="https://i.ibb.co/RNQFVKF/onebutton.png" alt="One Button" height="325" width="150"></td>
+  </tr>
+   <tr>
+    <th>Outlined Button</th>
+    <th>Radius & No Message</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td align="center"><img src="https://i.ibb.co/YXjWGB2/outlinebutton.png" alt="Outlined Button & View Radius" height="325" width="150"></td>
+    <td align="center"><img src="https://i.ibb.co/X2NZ3t3/nomessage.png" alt="Radius & No Message" height="325" width="150"></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
 
 ## Installation
 
@@ -74,15 +96,16 @@ var alert = AlertView()
 
 Customise the UI and add the Fade transition:
 ```swift
+let agreeButton = AgreeButton(title: "Go to Settings", borderWidth: 3)
 let alertSettings = AlertSettings(accentColor: .systemBlue,
-                                  backgroundColor: .systemBackground,
-                                  fontName: "AveriaSerifLibre",
-                                  icon: UIImage(systemName: "hand.wave"),
-                                  title: "I am a title",
-                                  message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                                  agreeTitle: "Go to Settings",
-                                  cancelTitle: "Cancel",
-                                  position: .bottom(animated: true))
+                                backgroundColor: .systemBackground,
+                                fontName: "AveriaSerifLibre",
+                                icon: UIImage(systemName: "hand.wave"),
+                                title: "I am a title",
+                                message: "Lorem ipsum dolor sit amet, consectetuadipiscing elit, sed do eiusmod tempor incididunt ulabore et dolore magna aliqua.",
+                                agreeButton: agreeButton,
+                                cancelTitle: "Cancel",
+                                position: .bottom(animated: true))
 alert.setupContents(delegate: self, settings: alertSettings)
 alert.fadeIn(duration: 0.3)
 ```
