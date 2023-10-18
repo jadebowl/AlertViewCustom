@@ -6,7 +6,7 @@ public protocol AlertViewDelegate: AnyObject {
 }
 
 /**
- With AlertViewCustom you can create your own customised UIAlertView instead of using the default one from Apple, which doesn't always fit in with the style of your app.
+ With AlertViewCustom you can create your own customised UIAlertView instead of using the default one from Apple
 */
 public class AlertView {
     public var delegate: AlertViewDelegate? {
