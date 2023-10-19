@@ -96,10 +96,9 @@ var alert = AlertView()
 
 Customise the UI and add the Fade transition:
 ```swift
-let agreeButton = AgreeButton(title: "Go to Settings", borderWidth: 3)
+let agreeButton = AgreeButton(title: "Go to Settings")
 let alertSettings = AlertSettings(accentColor: .systemBlue,
                                 backgroundColor: .systemBackground,
-                                fontName: "AveriaSerifLibre",
                                 icon: UIImage(systemName: "hand.wave"),
                                 title: "I am a title",
                                 message: "Lorem ipsum dolor sit amet, consectetuadipiscing elit, sed do eiusmod tempor incididunt ulabore et dolore magna aliqua.",
