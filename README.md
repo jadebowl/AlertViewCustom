@@ -33,26 +33,26 @@ With AlertViewCustom you can create your own customised UIAlertView instead of u
 ## Examples
 <table>
   <tr>
-    <th>Position & No Title</th>
+    <th>Bottom & No Title</th>
     <th>Font Custom</th>
     <th>Icon & Color</th>
     <th>One Button</th>
   </tr>
   <tr>
     <td align="center"><img src="https://i.ibb.co/pQhJpns/notitle.png" alt="Position & No Title" height="325" width="150"></td>
-    <td align="center"><img src="https://i.ibb.co/hC8CT2C/fontcustom.png" alt="Font Custom" height="325" width="150"></td>
+    <td align="center"><img src="https://i.ibb.co/MV2Y3KP/font.png" alt="Font Custom" height="325" width="150"></td>
     <td align="center"><img src="https://i.ibb.co/ZfqtykP/iconcolor.png" alt="Icon & Color" height="325" width="150"></td>
     <td align="center"><img src="https://i.ibb.co/RNQFVKF/onebutton.png" alt="One Button" height="325" width="150"></td>
   </tr>
    <tr>
     <th>Outlined Button</th>
-    <th>Radius & No Message</th>
+    <th></th>
     <th></th>
     <th></th>
   </tr>
   <tr>
     <td align="center"><img src="https://i.ibb.co/YXjWGB2/outlinebutton.png" alt="Outlined Button & View Radius" height="325" width="150"></td>
-    <td align="center"><img src="https://i.ibb.co/X2NZ3t3/nomessage.png" alt="Radius & No Message" height="325" width="150"></td>
+   <td></td>
     <td></td>
     <td></td>
   </tr>
