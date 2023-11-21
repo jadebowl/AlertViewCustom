@@ -43,6 +43,7 @@ class AlertViewCustom: UIView {
     
     lazy var titleLabel: UILabel = {
         let title = UILabel()
+        title.numberOfLines = 0
         title.textAlignment = .center
         title.font = .preferredFont(forTextStyle: .headline)
         return title
