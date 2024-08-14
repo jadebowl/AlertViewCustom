@@ -131,6 +131,7 @@ class AlertViewCustom: UIView {
     
     private func setupIcon() {
         mainStackView.insertArrangedSubview(iconImageView, at: 0)
+        iconImageView.contentMode = .scaleAspectFit
         iconImageView.translatesAutoresizingMaskIntoConstraints = false
         iconImageView.heightAnchor.constraint(equalToConstant: 40).isActive = true
         iconImageView.widthAnchor.constraint(equalToConstant: 40).isActive = true
