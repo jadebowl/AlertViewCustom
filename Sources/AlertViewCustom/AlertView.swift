@@ -117,12 +117,17 @@ public class AlertView {
         default:
             alertView.backgroundView.translatesAutoresizingMaskIntoConstraints = false
             alertView.alertBottomConstraint?.isActive = false
-            alertView.alertTopConstraint = alertView.backgroundView.topAnchor
-                .constraint(lessThanOrEqualTo: alertView.contentView.topAnchor, constant: 300)
+            
+            alertView.backgroundView.centerXAnchor
+                .constraint(equalTo: alertView.contentView.centerXAnchor).isActive = true
+            alertView.backgroundView.centerYAnchor
+                .constraint(equalTo: alertView.contentView.centerYAnchor).isActive = true
+            alertView.backgroundView.widthAnchor.constraint(greaterThanOrEqualToConstant: 100).isActive = true
+            alertView.backgroundView.heightAnchor.constraint(greaterThanOrEqualToConstant: 100).isActive = true
+
             alertView.alertCenterConstraint = alertView.backgroundView.centerYAnchor
                 .constraint(equalTo: alertView.contentView.centerYAnchor)
             alertView.alertCenterConstraint?.isActive = true
-            alertView.alertTopConstraint?.isActive = true
         }
     }
     
