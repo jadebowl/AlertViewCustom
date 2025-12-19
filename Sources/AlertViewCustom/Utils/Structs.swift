@@ -64,7 +64,10 @@ public enum AgreeButtonStyle {
       - style: normal or glass (blurred, for iOS 26)
 */
 public struct AgreeButton {
-    public init(title: String, cornerRadius: CGFloat = 16, borderWidth: CGFloat = 0, style: AgreeButtonStyle = .normal) {
+    public init(title: String,
+                cornerRadius: CGFloat = 16,
+                borderWidth: CGFloat = 0,
+                style: AgreeButtonStyle = .normal) {
         self.title = title
         self.cornerRadius = cornerRadius
         self.borderWidth = borderWidth
@@ -75,4 +78,3 @@ public struct AgreeButton {
     let borderWidth: CGFloat
     let style: AgreeButtonStyle
 }
-

@@ -90,7 +90,11 @@ public class AlertView {
         alertView.messageLabel.isHidden = alertView.messageLabel.text == nil
     }
     
-    func setupAgreeButton(accentColor: UIColor, title: String, cornerRadius: CGFloat, borderWidth: CGFloat, style: AgreeButtonStyle) {
+    func setupAgreeButton(accentColor: UIColor,
+                          title: String,
+                          cornerRadius: CGFloat,
+                          borderWidth: CGFloat,
+                          style: AgreeButtonStyle) {
         alertView.agreeButton.setTitle(title, for: .normal)
         alertView.agreeButton.backgroundColor = borderWidth != 0 ? .clear : accentColor
         alertView.agreeButton.layer.borderColor = accentColor.cgColor
