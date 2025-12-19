@@ -49,20 +49,30 @@ public struct AlertSettings {
     let position: AlertPosition?
 }
 
+/// Style for the Agree button appearance
+public enum AgreeButtonStyle {
+    case normal
+    case glass
+}
+
 /**
   Customise the agree button
    - parameters:
       - title
       - cornerRadius
       - borderWidth: Applies a border with the accentColor and makes the background clear
+      - style: normal or glass (blurred, for iOS 26)
 */
 public struct AgreeButton {
-    public init(title: String, cornerRadius: CGFloat = 16, borderWidth: CGFloat = 0) {
+    public init(title: String, cornerRadius: CGFloat = 16, borderWidth: CGFloat = 0, style: AgreeButtonStyle = .normal) {
         self.title = title
         self.cornerRadius = cornerRadius
         self.borderWidth = borderWidth
+        self.style = style
     }
     let title: String
     let cornerRadius: CGFloat
     let borderWidth: CGFloat
+    let style: AgreeButtonStyle
 }
+
