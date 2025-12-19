@@ -12,14 +12,13 @@ class ContentViewModel: ObservableObject {
     let alert = AlertView()
     
     func showAlert() {
-        let agreeButton = AgreeButton(title: "Go to Settings")
+        let agreeButton = AgreeButton(title: "Go to Settings", style: .glass)
         let alertSettings = AlertSettings(accentColor: .systemBlue,
                                           backgroundColor: .systemBackground,
                                           icon: UIImage(systemName: "hand.wave"),
                                           title: "I am a title",
                                           message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                                           agreeButton: agreeButton,
-                                          cancelTitle: "Cancel",
                                           position: .center)
         alert.setupContents(delegate: self, settings: alertSettings)
         alert.fadeIn(duration: 0.3)

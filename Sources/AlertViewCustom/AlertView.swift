@@ -47,7 +47,8 @@ public class AlertView {
         setupAgreeButton(accentColor: settings.accentColor,
                          title: settings.agreeButton.title,
                          cornerRadius: settings.agreeButton.cornerRadius,
-                         borderWidth: settings.agreeButton.borderWidth)
+                         borderWidth: settings.agreeButton.borderWidth,
+                         style: settings.agreeButton.style)
         setupCancelButton(accentColor: settings.accentColor, cancelTitle: settings.cancelTitle)
         setupPosition(position: settings.position)
         setupHostVCConstraints()
@@ -89,12 +90,20 @@ public class AlertView {
         alertView.messageLabel.isHidden = alertView.messageLabel.text == nil
     }
     
-    func setupAgreeButton(accentColor: UIColor, title: String, cornerRadius: CGFloat, borderWidth: CGFloat) {
+    func setupAgreeButton(accentColor: UIColor,
+                          title: String,
+                          cornerRadius: CGFloat,
+                          borderWidth: CGFloat,
+                          style: AgreeButtonStyle) {
         alertView.agreeButton.setTitle(title, for: .normal)
         alertView.agreeButton.backgroundColor = borderWidth != 0 ? .clear : accentColor
         alertView.agreeButton.layer.borderColor = accentColor.cgColor
         alertView.agreeButton.layer.borderWidth = borderWidth
         alertView.agreeButton.layer.cornerRadius = cornerRadius
+
+        if style == .glass {
+            alertView.agreeButton.applyGlassEffectIfAvailable()
+        }
     }
     
     func setupCancelButton(accentColor: UIColor, cancelTitle: String?) {

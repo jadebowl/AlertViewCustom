@@ -20,6 +20,25 @@ internal extension UIColor {
     }
 }
 
+extension UIButton {
+    func applyGlassEffectIfAvailable() {
+        if #available(iOS 26.0, *) {
+            var config = UIButton.Configuration.glass()
+            config.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { incoming in
+                var outgoing = incoming
+                outgoing.foregroundColor = outgoing.backgroundColor?.contrastColor()
+                
+                let base = UIFont.systemFont(ofSize: UIFont.preferredFont(forTextStyle: .body).pointSize,
+                                             weight: .semibold)
+                outgoing.font = UIFontMetrics(forTextStyle: .body).scaledFont(for: base)
+                
+                return outgoing
+            }
+            self.configuration = config
+        }
+    }
+}
+
 extension UIWindow {
     func dismiss() {
         isHidden = true
